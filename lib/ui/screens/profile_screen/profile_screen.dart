@@ -7,6 +7,8 @@ import 'package:code_structure/custom_widgets/friend_zone/expended_+_icon_button
 import 'package:code_structure/custom_widgets/friend_zone/expended_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/multimedia_introduction.dart';
 import 'package:code_structure/custom_widgets/friend_zone/profile_2_listyview.dart';
+import 'package:code_structure/custom_widgets/friend_zone/shrink_button.dart';
+import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
 import 'package:code_structure/ui/screens/profile_screen/profile_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -38,6 +40,18 @@ class _ProfileScreenState extends State<ProfileScreen> {
         create: (context) => ProfileViewModel(),
         child: Consumer<ProfileViewModel>(builder: (context, model, child) {
           return Scaffold(
+            backgroundColor: Color(0xffffffff),
+            appBar: AppBar(
+              backgroundColor: Color(0xffffffff),
+              leading: Icon(Icons.arrow_back_ios),
+              title: Text("User Profile"),
+              centerTitle: true,
+              actions: [
+                Icon(Icons.edit),
+                20.horizontalSpace,
+                Icon(Icons.settings)
+              ],
+            ),
             body: Padding(
               padding: const EdgeInsets.all(10.0),
               child: SingleChildScrollView(
@@ -46,7 +60,7 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     50.verticalSpace,
-                    // CustomProfile(Object_ProfileModel: Object_ProfileModel,)
+
                     CustomExpendButton(text: "Follow"),
                     25.verticalSpace,
                     Text("Multimedia Introduction"),
@@ -134,14 +148,37 @@ class _ProfileScreenState extends State<ProfileScreen> {
                       children: [
                         Text("Preferences and Setting"),
                         220.horizontalSpace,
-                        Icon(
-                          Icons.arrow_forward_ios_rounded,
-                          color: Colors.grey[600],
+                        GestureDetector(
+                          onTap: () {
+                            // Navigator.push(
+                            //     context,
+                            //     MaterialPageRoute(
+                            //         builder: (context) => HomeScreen()));
+                          },
+                          child: Icon(
+                            Icons.arrow_forward_ios_rounded,
+                            color: Colors.grey[600],
+                          ),
                         )
                       ],
                     ),
                     20.verticalSpace,
-                    CustomExpend_Icon_Button(icon: Icon(Icons.), text: text)
+                    GestureDetector(
+                      onTap: () {},
+                      child: CustomExpend_Icon_Button(
+                          icon: Icon(Icons.swap_vertical_circle_rounded),
+                          text: "Save Changes"),
+                    ),
+
+                    25.verticalSpace,
+                    Padding(
+                      padding: const EdgeInsets.only(right: 59),
+                      child: Align(
+                        alignment: Alignment.bottomRight,
+                        child: CustomShrinkButton(
+                            icon: Icon(Icons.edit), text: "Quick edit"),
+                      ),
+                    )
                   ],
                 ),
               ),
