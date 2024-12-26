@@ -1,12 +1,11 @@
-import 'package:code_structure/core/constants/app_assest.dart';
-import 'package:code_structure/core/constants/strings.dart';
 import 'package:code_structure/core/model/schedual_meetups.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomSchedualMeetUpsWidget extends StatelessWidget {
+// ignore: must_be_immutable
+class CustomScheduleMeetUpsWidget extends StatelessWidget {
   SchedualMeetupsModel Object_scgedualMeetUps = SchedualMeetupsModel();
-  CustomSchedualMeetUpsWidget(
+  CustomScheduleMeetUpsWidget(
       {super.key, required this.Object_scgedualMeetUps});
 
   @override

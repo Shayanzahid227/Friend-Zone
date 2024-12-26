@@ -1,16 +1,14 @@
-import 'package:code_structure/core/model/dashbord_Score_model.dart';
+import 'package:code_structure/core/model/your_matches_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
-class CustomCompatibilityScorewidget extends StatelessWidget {
-  DashBordCompatitbiltyScoreModel object_CompitableScore =
-      DashBordCompatitbiltyScoreModel();
+class CustomYourMatcheswidget extends StatelessWidget {
+  YourMatchesModel Object_YourMatches = YourMatchesModel();
   // final String imgUrl;
   // final String tittle;
   // final String subtittle;
-  CustomCompatibilityScorewidget(
-      {super.key, required this.object_CompitableScore
+  CustomYourMatcheswidget({super.key, required this.Object_YourMatches
 
       // required this.imgUrl,
       // required this.tittle,
@@ -20,7 +18,7 @@ class CustomCompatibilityScorewidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 185.h,
+      // height: 185.h,
       width: 140.w,
       decoration: BoxDecoration(
           color: Color(0xffffcfdff),
@@ -29,18 +27,19 @@ class CustomCompatibilityScorewidget extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 5),
-          Image.asset(
-            "${object_CompitableScore.imgUrl}",
-            fit: BoxFit.contain,
-            scale: 3.2,
-            width: double.infinity,
-            height: 130,
+          Padding(
+            padding: const EdgeInsets.all(5.0),
+            child: Image.asset(
+              "${Object_YourMatches.ImgUrl}",
+              fit: BoxFit.cover,
+              width: double.infinity,
+              // height: 130,
+            ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 5.0),
+            padding: const EdgeInsets.only(left: 10.0),
             child: Text(
-              "${object_CompitableScore.tiitle}",
+              "${Object_YourMatches.name}",
               style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w500,
@@ -48,9 +47,9 @@ class CustomCompatibilityScorewidget extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: const EdgeInsets.only(left: 5.0),
+            padding: const EdgeInsets.only(left: 10),
             child: Text(
-              "${object_CompitableScore.subTittle}",
+              "${Object_YourMatches.location}",
               style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w500,

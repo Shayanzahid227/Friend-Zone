@@ -1,4 +1,3 @@
-import 'package:code_structure/core/model/dashbord_Score_model.dart';
 import 'package:code_structure/core/model/home_matches.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,7 +8,7 @@ class CustomHomeMatcheswidget extends StatelessWidget {
   // final String imgUrl;
   // final String tittle;
   // final String subtittle;
-  CustomHomeMatcheswidget({required this.Object_homeMatches
+  CustomHomeMatcheswidget({super.key, required this.Object_homeMatches
 
       // required this.imgUrl,
       // required this.tittle,

@@ -1,10 +1,10 @@
-import 'package:code_structure/core/constants/app_assest.dart';
+import 'package:code_structure/core/constants/app_asset.dart';
 import 'package:code_structure/core/model/home_groups.dart';
 import 'package:code_structure/core/model/home_matches.dart';
 import 'package:code_structure/core/model/local_events.dart';
 import 'package:code_structure/core/others/base_view_model.dart';
 
-class HomeScreenVeiwMdel extends BaseViewModel {
+class HomeScreenViewModel extends BaseViewModel {
   ///
   ///
   ///            home screen matches view

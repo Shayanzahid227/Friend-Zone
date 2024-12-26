@@ -1,13 +1,14 @@
-import 'package:code_structure/core/constants/app_assest.dart';
+import 'package:code_structure/core/constants/app_asset.dart';
 import 'package:code_structure/core/constants/colors.dart';
-import 'package:code_structure/core/constants/strings.dart';
+
 import 'package:code_structure/core/model/local_events.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: must_be_immutable
 class CustomLocalEventsWidget extends StatelessWidget {
   HomeLocalEventsModel Object_LocalEventModel = HomeLocalEventsModel();
-  CustomLocalEventsWidget({required this.Object_LocalEventModel});
+  CustomLocalEventsWidget({super.key, required this.Object_LocalEventModel});
 
   @override
   Widget build(BuildContext context) {

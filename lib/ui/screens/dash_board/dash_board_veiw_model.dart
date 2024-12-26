@@ -1,5 +1,4 @@
-import 'package:code_structure/core/constants/app_assest.dart';
-import 'package:code_structure/core/constants/strings.dart';
+import 'package:code_structure/core/constants/app_asset.dart';
 import 'package:code_structure/core/model/dashbord_Score_model.dart';
 import 'package:code_structure/core/model/nearby_matches_model.dart';
 import 'package:code_structure/core/model/schedual_meetups.dart';

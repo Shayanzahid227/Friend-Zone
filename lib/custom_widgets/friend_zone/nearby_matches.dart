@@ -2,9 +2,10 @@ import 'package:code_structure/core/model/nearby_matches_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
+// ignore: must_be_immutable
 class CustomNearbyMatchesWidget extends StatelessWidget {
   NearbyMatchesModel Object_nearbyMatches = NearbyMatchesModel();
-  CustomNearbyMatchesWidget({required this.Object_nearbyMatches});
+  CustomNearbyMatchesWidget({super.key, required this.Object_nearbyMatches});
 
   @override
   Widget build(BuildContext context) {

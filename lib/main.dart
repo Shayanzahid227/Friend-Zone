@@ -1,8 +1,7 @@
-import 'package:code_structure/ui/screens/home_screen.dart/home_screen.dart';
+import 'package:code_structure/ui/screens/your_matches/your_matches_view.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-
-import 'ui/screens/dash_board/dash_board_veiw_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -21,7 +20,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: HomeScreen()));
+            home: YourMatches()));
   }
 }
 

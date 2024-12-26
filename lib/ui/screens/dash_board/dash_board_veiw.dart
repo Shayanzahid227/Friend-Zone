@@ -203,7 +203,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                           const EdgeInsets.only(right: 10.0),
                                       child: GestureDetector(
                                         onTap: () {},
-                                        child: CustomSchedualMeetUpsWidget(
+                                        child: CustomScheduleMeetUpsWidget(
                                             Object_scgedualMeetUps: model
                                                 .listSchedualMeetups[index]),
                                       ),
@@ -265,7 +265,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                     decoration: BoxDecoration(
                                         color: _isSelectedSchedaul
                                             ? buttonColor
-                                            : Color(0xfff),
+                                            : Color(0x00000fff),
                                         borderRadius:
                                             BorderRadius.circular(40)),
                                     child: Row(
@@ -321,7 +321,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                                 borderColor.withOpacity(0.20)),
                                         color: _isSelectedSchedaul
                                             ? transparentColor
-                                            : Color(0xfff),
+                                            : Color(0x00000fff),
                                         borderRadius:
                                             BorderRadius.circular(40)),
                                     child: Center(
