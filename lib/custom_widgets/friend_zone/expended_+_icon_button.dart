@@ -2,21 +2,20 @@ import 'package:flutter/material.dart';
 
 import 'package:code_structure/core/constants/colors.dart';
 
-class CustomExpendButton extends StatefulWidget {
+class CustomExpend_Icon_Button extends StatefulWidget {
   final String text; // String for the button text
-  // final Icon icon; // Icon for the button
+  final Icon icon; // Icon for the button
 
-  const CustomExpendButton({
-    super.key,
-    // required this.icon, // Required icon
+  CustomExpend_Icon_Button({
+    required this.icon, // Required icon
     required this.text, // Required text
   });
 
   @override
-  State<CustomExpendButton> createState() => _CustomExpendButtonState();
+  State<CustomExpend_Icon_Button> createState() => _CustomExpendButtonState();
 }
 
-class _CustomExpendButtonState extends State<CustomExpendButton> {
+class _CustomExpendButtonState extends State<CustomExpend_Icon_Button> {
   bool isSelected = true;
   @override
   void initState() {
@@ -61,8 +60,8 @@ class _CustomExpendButtonState extends State<CustomExpendButton> {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      //  icon,
-                      // SizedBox(width: 8),
+                      widget.icon,
+                      SizedBox(width: 8),
                       Text(
                         widget.text,
                         style: TextStyle(

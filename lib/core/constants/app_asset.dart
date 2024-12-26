@@ -23,6 +23,7 @@ class AppAssets {
   String topcontributor = "$dynamicAssets/topcontributor.png";
   String verified = "$dynamicAssets/verified.png";
   String nearby1 = "$dynamicAssets/nearby1.png";
+  String media = "$dynamicAssets/media.png";
   String FB = "$dynamicAssets/FB.png";
 
   ///

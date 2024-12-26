@@ -1,5 +1,4 @@
 import 'package:code_structure/core/constants/colors.dart';
-import 'package:code_structure/custom_widgets/friend_zone/your_matches.dart';
 import 'package:code_structure/ui/screens/your_matches/tabs/swipe_view.dart';
 
 import 'package:flutter/material.dart';

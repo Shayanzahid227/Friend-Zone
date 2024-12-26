@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:code_structure/core/constants/app_asset.dart'; // Ensure you have these assets and constants set up
+
 import 'package:code_structure/core/constants/colors.dart';
 
 class CustomShrinkButton extends StatelessWidget {
   final String text; // String for the button text
   final Icon icon; // Icon for the button
 
-  CustomShrinkButton({
+  const CustomShrinkButton({
+    super.key,
     required this.icon, // Required icon
     required this.text, // Required text
   });

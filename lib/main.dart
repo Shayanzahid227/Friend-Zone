@@ -1,4 +1,4 @@
-import 'package:code_structure/ui/screens/your_matches/your_matches_view.dart';
+import 'package:code_structure/ui/screens/profile_screen/profile_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: YourMatches()));
+            home: ProfileScreen()));
   }
 }
 
