@@ -95,7 +95,7 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         child: SizedBox(
                           height: 50,
                           child: Text(
-                              "add comment secction here i make a model and custom widget also sir "),
+                              "add comment section here i make a model and custom widget also sir using list tile but don't know.... "),
                         ),
                       ),
                       30.verticalSpace,
