@@ -4,7 +4,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomMultiMediaIntrodductionWidget extends StatelessWidget {
   ProfileMultimediaModel Object_profileMultiMedia = ProfileMultimediaModel();
-  CustomMultiMediaIntrodductionWidget({required this.Object_profileMultiMedia});
+  CustomMultiMediaIntrodductionWidget({super.key, required this.Object_profileMultiMedia});
 
   @override
   Widget build(BuildContext context) {

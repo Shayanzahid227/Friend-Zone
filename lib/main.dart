@@ -1,5 +1,4 @@
 import 'package:code_structure/ui/screens/details/adetails_screen_.dart';
-import 'package:code_structure/ui/screens/profile_screen/profile_screen.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

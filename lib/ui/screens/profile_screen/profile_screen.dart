@@ -1,14 +1,10 @@
-import 'package:code_structure/core/constants/app_asset.dart';
 import 'package:code_structure/core/constants/auth_text_feild.dart';
 import 'package:code_structure/core/constants/colors.dart';
-import 'package:code_structure/core/constants/strings.dart';
-import 'package:code_structure/core/model/profile_multimedia.dart';
 import 'package:code_structure/custom_widgets/friend_zone/expended_+_icon_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/expended_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/multimedia_introduction.dart';
 import 'package:code_structure/custom_widgets/friend_zone/profile_2_listyview.dart';
 import 'package:code_structure/custom_widgets/friend_zone/shrink_button.dart';
-import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
 import 'package:code_structure/ui/screens/profile_screen/profile_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

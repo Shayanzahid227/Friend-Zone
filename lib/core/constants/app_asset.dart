@@ -27,7 +27,7 @@ class AppAssets {
   String FB = "$dynamicAssets/FB.png";
   String detail1 = "$dynamicAssets/detail1.png";
   String detail22 = "$dynamicAssets/detail22.png";
-  String detail3 = "$dynamicAssets/detail3.png";
+  String detail4 = "$dynamicAssets/detail4.png";
   String detailmain = "$dynamicAssets/detailmain.png";
 
   ///
