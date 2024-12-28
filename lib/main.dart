@@ -1,4 +1,9 @@
+import 'package:code_structure/custom_widgets/friend_zone/notification_setting.dart';
+import 'package:code_structure/ui/root_screen/root_screen.dart';
+import 'package:code_structure/ui/screens/account_setting/account_setting_view.dart';
+import 'package:code_structure/ui/screens/account_setting/notification_settings.dart';
 import 'package:code_structure/ui/screens/compatibility_screen/compatibility_score_view.dart';
+import 'package:code_structure/ui/screens/dash_board/dash_board_veiw.dart';
 import 'package:code_structure/ui/screens/details/adetails_screen_.dart';
 
 import 'package:flutter/material.dart';
@@ -21,7 +26,7 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: CompatibiltyScore()));
+            home: AccountNotificationSettingView()));
   }
 }
 

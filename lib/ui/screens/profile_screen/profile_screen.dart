@@ -8,6 +8,7 @@ import 'package:code_structure/custom_widgets/friend_zone/shrink_button.dart';
 import 'package:code_structure/ui/screens/profile_screen/profile_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class ProfileScreen extends StatefulWidget {
@@ -59,7 +60,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
 
                     CustomExpendButton(text: "Follow"),
                     25.verticalSpace,
-                    Text("Multimedia Introduction"),
+                    Text(
+                      "Multimedia Introduction",
+                      style: GoogleFonts.nunito(
+                          fontWeight: FontWeight.w800, fontSize: 17),
+                    ),
 
                     SizedBox(
                       height: 210.h,
@@ -142,7 +147,11 @@ class _ProfileScreenState extends State<ProfileScreen> {
                     30.verticalSpace,
                     Row(
                       children: [
-                        Text("Preferences and Setting"),
+                        Text(
+                          "Preferences and Setting",
+                          style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w800, fontSize: 17),
+                        ),
                         220.horizontalSpace,
                         GestureDetector(
                           onTap: () {

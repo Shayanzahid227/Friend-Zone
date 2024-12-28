@@ -7,8 +7,10 @@ import 'package:code_structure/custom_widgets/friend_zone/compatibility_score.da
 import 'package:code_structure/custom_widgets/friend_zone/nearby_matches.dart';
 
 import 'package:code_structure/custom_widgets/friend_zone/schedual_meetups.dart';
+import 'package:code_structure/custom_widgets/friend_zone/shrink_button.dart';
 import 'package:code_structure/ui/screens/dash_board/dash_board_veiw_model.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
 
@@ -71,8 +73,10 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                         ),
                         Text(
                           "Yor Dashboard",
-                          style: TextStyle(
-                              fontSize: 28, fontWeight: FontWeight.w700),
+                          style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w500,
+                              fontSize: 17,
+                              color: Colors.black),
                         ),
                         Text(
                           "Yor Dashboard",
@@ -109,8 +113,10 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                           children: [
                             Text(
                               "Nearby Matches",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.w700),
+                              style: GoogleFonts.nunito(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 17,
+                                  color: Colors.black),
                             ),
                             TextButton(
                                 onPressed: () {},
@@ -156,8 +162,10 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                           children: [
                             Text(
                               "Upcoming Activities",
-                              style: TextStyle(
-                                  fontSize: 18, fontWeight: FontWeight.w700),
+                              style: GoogleFonts.nunito(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 17,
+                                  color: Colors.black),
                             ),
                             TextButton(
                                 onPressed: () {},
@@ -211,7 +219,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                   },
                                 ),
                               )
-                            : Text("list is epmty"),
+                            : Text(
+                                "list is epmty",
+                                style: GoogleFonts.nunito(
+                                    fontWeight: FontWeight.w500,
+                                    fontSize: 17,
+                                    color: Colors.black),
+                              ),
                         SizedBox(height: 15),
                         GestureDetector(
                           onTap: () {},
@@ -232,10 +246,10 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                 ),
                                 Text(
                                   "New Group",
-                                  style: TextStyle(
+                                  style: GoogleFonts.nunito(
                                       fontWeight: FontWeight.w500,
                                       fontSize: 17,
-                                      color: Colors.white),
+                                      color: Colors.black),
                                 )
                               ],
                             ),
@@ -256,8 +270,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                               },
                               child: Column(
                                 crossAxisAlignment: CrossAxisAlignment.center,
-                                mainAxisAlignment:
-                                    MainAxisAlignment.spaceAround,
+                                mainAxisAlignment: MainAxisAlignment.start,
                                 children: [
                                   Container(
                                     height: screenheight * 0.09,
@@ -327,7 +340,7 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                     child: Center(
                                       child: Text(
                                         "Interact ith AI Assitant",
-                                        style: TextStyle(
+                                        style: GoogleFonts.nunito(
                                             fontWeight: FontWeight.w500,
                                             fontSize: 17,
                                             color: Colors.black),

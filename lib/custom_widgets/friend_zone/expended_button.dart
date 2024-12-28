@@ -34,49 +34,48 @@ class _CustomExpendButtonState extends State<CustomExpendButton> {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
 
-    return Padding(
-      padding: const EdgeInsets.only(left: 20.0),
-      child: GestureDetector(
-        onTap: () {
-          onClick();
-        }, // Call the onTap function passed during widget creation
-        child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            mainAxisAlignment:
-                MainAxisAlignment.center, // Center content vertically
-            children: [
-              Container(
-                height: screenHeight * 0.05,
-                width: screenWidth * 0.8,
-                decoration: BoxDecoration(
-                  border: Border.all(
-                    width: 1,
-                    color: borderColor.withOpacity(0.20),
-                  ),
-                  color: isSelected ? buttonColor : Colors.grey,
-                  borderRadius: BorderRadius.circular(40),
+    return GestureDetector(
+      onTap: () {
+        onClick();
+      }, // Call the onTap function passed during widget creation
+      child: Container(
+        decoration:
+            BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20))),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          mainAxisAlignment:
+              MainAxisAlignment.center, // Center content vertically
+          children: [
+            Container(
+              height: screenHeight * 0.05,
+              width: screenWidth * 0.8,
+              decoration: BoxDecoration(
+                border: Border.all(
+                  width: 1,
+                  color: borderColor.withOpacity(0.20),
                 ),
-                child: Center(
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      //  icon,
-                      // SizedBox(width: 8),
-                      Text(
-                        widget.text,
-                        style: TextStyle(
-                          fontWeight: FontWeight.w500,
-                          fontSize: 17,
-                          color: Colors.black,
-                        ),
+                color: isSelected ? buttonColor : transparentColor,
+                borderRadius: BorderRadius.circular(40),
+              ),
+              child: Center(
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    //  icon,
+                    // SizedBox(width: 8),
+                    Text(
+                      widget.text,
+                      style: TextStyle(
+                        fontWeight: FontWeight.w500,
+                        fontSize: 17,
+                        color: Colors.black,
                       ),
-                    ],
-                  ),
+                    ),
+                  ],
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );

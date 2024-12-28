@@ -4,6 +4,7 @@ import 'package:code_structure/custom_widgets/friend_zone/key_factor_CS.dart';
 import 'package:code_structure/ui/screens/compatibility_screen/compatibility_score_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class CompatibiltyScore extends StatefulWidget {
@@ -41,7 +42,7 @@ class _CompatibiltyScoreState extends State<CompatibiltyScore> {
                           itemCount: model.listKeyFactoCS.length,
                           itemBuilder: (BuildContext context, int index) {
                             return Padding(
-                              padding: const EdgeInsets.all(8.0),
+                              padding: const EdgeInsets.all(4.0),
                               child: GestureDetector(
                                 onTap: () {},
                                 child: CustomKeyFactorCompatibilityScoreWidget(
@@ -58,14 +59,18 @@ class _CompatibiltyScoreState extends State<CompatibiltyScore> {
                             "add user profile type info check in Figma i made a custom widget but ..."),
                       ),
                       20.verticalSpace,
-                      CustomExpendButton(text: "Add to Network"),
+                      Center(child: CustomExpendButton(text: "Add to Network")),
                       20.verticalSpace,
                       Padding(
                         padding: const EdgeInsets.all(8.0),
-                        child: Text("Actionable Tips"),
+                        child: Text(
+                          "Actionable Tips",
+                          style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w800, fontSize: 17),
+                        ),
                       ),
                       Center(
-                        child: Container(
+                        child: SizedBox(
                           width: 350.w,
                           child: Divider(
                             height: 1,

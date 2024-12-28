@@ -1,6 +1,7 @@
 import 'package:code_structure/core/model/home_matches.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class CustomHomeMatcheswidget extends StatelessWidget {
@@ -40,10 +41,8 @@ class CustomHomeMatcheswidget extends StatelessWidget {
             padding: const EdgeInsets.only(left: 10.0),
             child: Text(
               "${Object_homeMatches.name}",
-              style: TextStyle(
-                  fontSize: 13,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xfff1b1e28)),
+              style:
+                  GoogleFonts.nunito(fontWeight: FontWeight.w800, fontSize: 17),
             ),
           ),
           Padding(

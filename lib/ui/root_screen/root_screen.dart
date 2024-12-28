@@ -69,7 +69,7 @@ class RootScreen extends StatelessWidget {
                 ),
 
                 CustomBottomNavigatorBar(
-                  image: '$staticAssets/booking1.png',
+                  image: '$staticAssets/profile.png',
                   onTap: () {
                     model.updatedScreen(1);
                   },
@@ -81,7 +81,7 @@ class RootScreen extends StatelessWidget {
                 ),
 
                 CustomBottomNavigatorBar(
-                  image: '$staticAssets/person1.png',
+                  image: '$staticAssets/detail2.png',
                   onTap: () {
                     model.updatedScreen(2);
                   },

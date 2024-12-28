@@ -4,6 +4,7 @@ import 'package:code_structure/custom_widgets/friend_zone/your_matches_comment.d
 import 'package:code_structure/ui/screens/your_matches/your_matchs_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class SwipTabYourMatvhes extends StatefulWidget {
@@ -32,8 +33,8 @@ class _SwipTabYourMatvhesState extends State<SwipTabYourMatvhes> {
                         25.verticalSpace,
                         Text(
                           "Swipable Profiles",
-                          style: TextStyle(
-                              fontSize: 18, fontWeight: FontWeight.w700),
+                          style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w800, fontSize: 17),
                         ),
                         15.verticalSpace,
 

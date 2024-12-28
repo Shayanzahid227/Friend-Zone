@@ -1,6 +1,7 @@
 import 'package:code_structure/core/model/nearby_matches_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class CustomNearbyMatchesWidget extends StatelessWidget {
@@ -18,9 +19,9 @@ class CustomNearbyMatchesWidget extends StatelessWidget {
           boxShadow: [
             BoxShadow(
                 color: Colors.black,
-                offset: const Offset(0.1, 2),
-                blurRadius: 2.r,
-                spreadRadius: 1)
+                offset: const Offset(0.0, 0),
+                blurRadius: 0.r,
+                spreadRadius: 0.1)
           ],
           color: const Color.fromARGB(255, 220, 214, 214),
           borderRadius: BorderRadius.circular(18)),
@@ -39,7 +40,11 @@ class CustomNearbyMatchesWidget extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Text("${Object_nearbyMatches.GroupName}"),
+              Text(
+                "${Object_nearbyMatches.GroupName}",
+                style: GoogleFonts.nunito(
+                    fontWeight: FontWeight.w800, fontSize: 17),
+              ),
               SizedBox(
                 height: 8,
               ),

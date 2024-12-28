@@ -1,7 +1,5 @@
 import 'package:code_structure/core/model/Upcoming_events_detail.dart';
-import 'package:code_structure/core/model/nearby_matches_model.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class CustomUpComingEventsWidget extends StatelessWidget {

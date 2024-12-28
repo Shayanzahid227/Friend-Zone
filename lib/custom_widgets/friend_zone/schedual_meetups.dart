@@ -1,6 +1,7 @@
 import 'package:code_structure/core/model/schedual_meetups.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
 class CustomScheduleMeetUpsWidget extends StatelessWidget {
@@ -15,8 +16,13 @@ class CustomScheduleMeetUpsWidget extends StatelessWidget {
     return Container(
       height: screenheight * 0.3,
       width: screenWidth * 0.44,
-      decoration: BoxDecoration(
-          color: Colors.amber, borderRadius: BorderRadius.circular(10)),
+      decoration: BoxDecoration(boxShadow: [
+        BoxShadow(
+            color: Colors.black,
+            offset: const Offset(0.0, 0),
+            blurRadius: 0.r,
+            spreadRadius: 0.3)
+      ], color: Colors.grey[100], borderRadius: BorderRadius.circular(10)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -33,10 +39,8 @@ class CustomScheduleMeetUpsWidget extends StatelessWidget {
             padding: const EdgeInsets.only(left: 5.0),
             child: Text(
               "${Object_scgedualMeetUps.tiitle}",
-              style: TextStyle(
-                  fontSize: 15,
-                  fontWeight: FontWeight.w700,
-                  color: Color(0xfff1b1e28)),
+              style:
+                  GoogleFonts.nunito(fontWeight: FontWeight.w800, fontSize: 17),
             ),
           ),
           Padding(

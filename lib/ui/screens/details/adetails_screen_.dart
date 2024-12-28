@@ -5,6 +5,7 @@ import 'package:code_structure/custom_widgets/friend_zone/up_coming_events_detai
 import 'package:code_structure/ui/screens/details/detail_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class DetailsScreen extends StatefulWidget {
@@ -34,7 +35,9 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       ),
                       Text("add user info with DP here "),
                       30.verticalSpace,
-                      CustomExpendButton(text: "Follow"),
+                      CustomExpendButton(
+                        text: "Follow",
+                      ),
                       20.verticalSpace,
                       SizedBox(
                         height: 400.h,
@@ -55,7 +58,6 @@ class _DetailsScreenState extends State<DetailsScreen> {
                                         model.listDetailIdk[index]),
                               ),
                             );
-                            ;
                           },
                         ),
                       ),
@@ -63,9 +65,21 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         padding: const EdgeInsets.all(8.0),
                         child: Row(
                           children: [
-                            Text(" UpComming Events "),
-                            130.horizontalSpace,
-                            Text("View all events")
+                            Text(
+                              " UpComming Events ",
+                              style: GoogleFonts.nunito(
+                                  fontWeight: FontWeight.w500,
+                                  fontSize: 17,
+                                  color: Colors.black),
+                            ),
+                            90.horizontalSpace,
+                            Text(
+                              "View all events",
+                              style: TextStyle(
+                                  color: Color(0xfff123cc9),
+                                  fontSize: 14,
+                                  fontWeight: FontWeight.w700),
+                            )
                           ],
                         ),
                       ),

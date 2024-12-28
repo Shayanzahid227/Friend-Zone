@@ -5,6 +5,7 @@ import 'package:code_structure/custom_widgets/friend_zone/local_events.dart';
 import 'package:code_structure/ui/screens/home_screen/home_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
 class MatchesTab extends StatefulWidget {
@@ -78,12 +79,10 @@ class _MatchesTabState extends State<MatchesTab> {
                         //////              Groups
                         ///
                         ///
-                        const Text(
+                        Text(
                           "Groups",
-                          style: TextStyle(
-                              fontWeight: FontWeight.w800,
-                              fontSize: 18,
-                              color: Colors.black),
+                          style: GoogleFonts.nunito(
+                              fontWeight: FontWeight.w800, fontSize: 17),
                         ),
 
                         10.verticalSpace,
@@ -175,10 +174,9 @@ class _MatchesTabState extends State<MatchesTab> {
                                   child: Center(
                                     child: Text(
                                       "Explore More",
-                                      style: TextStyle(
-                                          fontWeight: FontWeight.w500,
-                                          fontSize: 17,
-                                          color: Colors.black),
+                                      style: GoogleFonts.nunito(
+                                          fontWeight: FontWeight.w800,
+                                          fontSize: 17),
                                     ),
                                   ),
                                 ),
