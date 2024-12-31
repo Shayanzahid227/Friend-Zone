@@ -4,7 +4,7 @@ import 'package:code_structure/core/model/nearby_matches_model.dart';
 import 'package:code_structure/core/model/schedual_meetups.dart';
 import 'package:code_structure/core/others/base_view_model.dart';
 
-class DashBoardVeiwModel extends BaseViewModel {
+class HomeScreenVeiwModel extends BaseViewModel {
   List<DashBordCompatitbiltyScoreModel> listcompatibilityscore = [
     DashBordCompatitbiltyScoreModel(
         imgUrl: AppAssets().score1,

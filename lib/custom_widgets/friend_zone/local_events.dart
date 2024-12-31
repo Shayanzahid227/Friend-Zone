@@ -77,7 +77,7 @@ class CustomLocalEventsWidget extends StatelessWidget {
                         scale: 4,
                       )),
                   SizedBox(
-                    width: 160.w,
+                    width: 150.w,
                   ),
                   IconButton(
                       onPressed: () {},
@@ -103,7 +103,7 @@ class CustomLocalEventsWidget extends StatelessWidget {
           //     CircleAvatar(
           //       radius: 15,
           //       backgroundImage:
-          //           AssetImage(AppAssets().FB),
+          //           AssetImage(AppAssets().FacebookIcon),
           //     ),
           //     SizedBox(
           //         width:

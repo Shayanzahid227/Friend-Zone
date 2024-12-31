@@ -1,8 +1,7 @@
-import 'package:code_structure/ui/screens/account_setting/notification_settings.dart';
 import 'package:code_structure/ui/screens/auth/login/login_screen.dart';
-import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
+import 'package:code_structure/ui/screens/auth/sign_in/sign_in_screen.dart';
+import 'package:code_structure/ui/screens/nearby_matches/nearby_view.dart';
 import 'package:code_structure/ui/start_screen.dart';
-
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -17,12 +16,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ScreenUtilInit(
-        designSize: const Size(394, 852),
+        designSize: Size(MediaQuery.sizeOf(context).width,
+            MediaQuery.sizeOf(context).height),
         minTextAdapt: true,
         splitScreenMode: true,
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
-            theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: LoginScreen()));
+            theme: ThemeData(
+                scaffoldBackgroundColor: const Color(0xffFAF8F6),
+
+                ///
+                /// Font Family
+                ///
+                fontFamily: "Nunito"),
+            home: StartScreen()));
   }
 }

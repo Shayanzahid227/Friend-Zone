@@ -4,7 +4,7 @@ import 'package:code_structure/core/model/home_matches.dart';
 import 'package:code_structure/core/model/local_events.dart';
 import 'package:code_structure/core/others/base_view_model.dart';
 
-class HomeScreenViewModel extends BaseViewModel {
+class InteretstWithAIViewModel extends BaseViewModel {
   ///
   ///
   ///            home screen matches view
@@ -61,7 +61,7 @@ class HomeScreenViewModel extends BaseViewModel {
   List<HomeLocalEventsModel> listHomeLocaLEVents = [
     HomeLocalEventsModel(
         MainImgUrl: AppAssets().localevents,
-        profileImgUrl: AppAssets().FB,
+        profileImgUrl: AppAssets().FacebookIcon,
         title: "Local Events",
         day: "Monday",
         time: "5 PM",
@@ -69,7 +69,7 @@ class HomeScreenViewModel extends BaseViewModel {
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
         MainImgUrl: AppAssets().localevents,
-        profileImgUrl: AppAssets().FB,
+        profileImgUrl: AppAssets().GoogleIcon,
         title: "Local Events",
         day: "Monday",
         time: "5 PM",
@@ -77,7 +77,7 @@ class HomeScreenViewModel extends BaseViewModel {
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
         MainImgUrl: AppAssets().localevents,
-        profileImgUrl: AppAssets().FB,
+        profileImgUrl: AppAssets().GoogleIcon,
         title: "Local Events",
         day: "Monday",
         time: "5 PM",
@@ -85,7 +85,7 @@ class HomeScreenViewModel extends BaseViewModel {
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
         MainImgUrl: AppAssets().localevents,
-        profileImgUrl: AppAssets().FB,
+        profileImgUrl: AppAssets().AppleIcon,
         title: "Local Events",
         day: "Monday",
         time: "5 PM",
@@ -93,7 +93,7 @@ class HomeScreenViewModel extends BaseViewModel {
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
         MainImgUrl: AppAssets().localevents,
-        profileImgUrl: AppAssets().FB,
+        profileImgUrl: AppAssets().GoogleIcon,
         title: "Local Events",
         day: "Monday",
         time: "5 PM",
@@ -101,7 +101,7 @@ class HomeScreenViewModel extends BaseViewModel {
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
         MainImgUrl: AppAssets().localevents,
-        profileImgUrl: AppAssets().FB,
+        profileImgUrl: AppAssets().GoogleIcon,
         title: "Local Events",
         day: "Monday",
         time: "5 PM",
@@ -109,7 +109,7 @@ class HomeScreenViewModel extends BaseViewModel {
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
         MainImgUrl: AppAssets().localevents,
-        profileImgUrl: AppAssets().FB,
+        profileImgUrl: AppAssets().FacebookIcon,
         title: "Local Events",
         day: "Monday",
         time: "5 PM",
@@ -117,7 +117,7 @@ class HomeScreenViewModel extends BaseViewModel {
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
         MainImgUrl: AppAssets().localevents,
-        profileImgUrl: AppAssets().FB,
+        profileImgUrl: AppAssets().FacebookIcon,
         title: "Local Events",
         day: "Monday",
         time: "5 PM",

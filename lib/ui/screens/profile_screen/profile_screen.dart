@@ -1,7 +1,7 @@
 import 'package:code_structure/core/constants/auth_text_feild.dart';
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/custom_widgets/friend_zone/expended_+_icon_button.dart';
-import 'package:code_structure/custom_widgets/friend_zone/expended_button.dart';
+import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/multimedia_introduction.dart';
 import 'package:code_structure/custom_widgets/friend_zone/profile_2_listyview.dart';
 import 'package:code_structure/custom_widgets/friend_zone/shrink_button.dart';
@@ -58,7 +58,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     50.verticalSpace,
 
-                    CustomExpendButton(text: "Follow"),
+                    ///
+                    /// Custom Button
+                    ///
+                    CustomButton(
+                      name: "Follow",
+                      onPressed: () {},
+                      textColor: whiteCoolor,
+                    ),
+
                     25.verticalSpace,
                     Text(
                       "Multimedia Introduction",

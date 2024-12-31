@@ -25,7 +25,9 @@ class AppAssets {
   String verified = "$dynamicAssets/verified.png";
   String nearby1 = "$dynamicAssets/nearby1.png";
   String media = "$dynamicAssets/media.png";
-  String FB = "$dynamicAssets/FB.png";
+  String FacebookIcon = "$dynamicAssets/FacebookIcon.png";
+  String GoogleIcon = "$dynamicAssets/GoogleIcon.png";
+  String AppleIcon = "$dynamicAssets/AppleIcon.png";
   String detail1 = "$dynamicAssets/detail1.png";
   String detail22 = "$dynamicAssets/detail22.png";
   String detail4 = "$dynamicAssets/detail4.png";

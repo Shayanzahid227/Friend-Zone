@@ -2,7 +2,7 @@ import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/custom_widgets/friend_zone/home_groups.dart';
 import 'package:code_structure/custom_widgets/friend_zone/home_matches.dart';
 import 'package:code_structure/custom_widgets/friend_zone/local_events.dart';
-import 'package:code_structure/ui/screens/home_screen/home_view_model.dart';
+import 'package:code_structure/ui/screens/Interest_with_ai/interest_with_ai_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -35,8 +35,8 @@ class _MatchesTabState extends State<MatchesTab> {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return ChangeNotifierProvider(
-      create: (context) => HomeScreenViewModel(),
-      child: Consumer<HomeScreenViewModel>(
+      create: (context) => InteretstWithAIViewModel(),
+      child: Consumer<InteretstWithAIViewModel>(
           builder: (context, model, child) => Scaffold(
                 body: SingleChildScrollView(
                   child: Padding(
@@ -55,7 +55,7 @@ class _MatchesTabState extends State<MatchesTab> {
                         ),
                         10.verticalSpace,
                         SizedBox(
-                          height: screenHeight * 0.23,
+                          height: screenHeight * 0.22,
                           child: ListView.builder(
                             shrinkWrap: true,
                             itemCount: model.listMatches.length,
@@ -65,8 +65,8 @@ class _MatchesTabState extends State<MatchesTab> {
                                 padding: EdgeInsets.only(right: 12),
                                 child: GestureDetector(
                                   onTap: () {},
-                                  child: CustomHomeMatcheswidget(
-                                      Object_homeMatches:
+                                  child: CustomInterestWithAIMatcheswidget(
+                                      Object_InteretWithAIMatches:
                                           model.listMatches[index]),
                                 ),
                               );

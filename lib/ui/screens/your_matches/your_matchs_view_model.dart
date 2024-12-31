@@ -35,57 +35,57 @@ class YourMatchesViewModel extends BaseViewModel {
   ///
   List<YourMatchesCommentModel> listYourMatchesComment = [
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().FacebookIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().GoogleIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().GoogleIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().GoogleIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().FacebookIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().FacebookIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().FacebookIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().FacebookIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().FacebookIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().FacebookIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am"),
     YourMatchesCommentModel(
-        ProfilrImgUrl: AppAssets().FB,
+        ProfilrImgUrl: AppAssets().FacebookIcon,
         UserNamere: "Shanzoo",
         Comment: "kun tala kun talha ",
         time: "6:00 Am")

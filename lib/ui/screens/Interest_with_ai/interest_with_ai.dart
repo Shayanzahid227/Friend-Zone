@@ -1,20 +1,20 @@
 import 'package:code_structure/core/constants/colors.dart';
 
-import 'package:code_structure/ui/screens/home_screen/home_tabs/matches_tab.dart';
-import 'package:code_structure/ui/screens/home_screen/home_view_model.dart';
+import 'package:code_structure/ui/screens/Interest_with_ai/home_tabs/matches_tab.dart';
+import 'package:code_structure/ui/screens/Interest_with_ai/interest_with_ai_view_model.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
 
-class HomeScreen extends StatefulWidget {
-  const HomeScreen({super.key});
+class InterestWithAI extends StatefulWidget {
+  const InterestWithAI({super.key});
 
   @override
-  State<HomeScreen> createState() => _HomeScreenState();
+  State<InterestWithAI> createState() => _InterestWithAIState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
+class _InterestWithAIState extends State<InterestWithAI> {
   bool _isSelected = false;
   bool _isSelectedSchedaul = false;
   @override
@@ -34,15 +34,15 @@ class _HomeScreenState extends State<HomeScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenHeight = MediaQuery.of(context).size.height;
     return ChangeNotifierProvider(
-      create: (context) => HomeScreenViewModel(),
-      child: Consumer<HomeScreenViewModel>(
+      create: (context) => InteretstWithAIViewModel(),
+      child: Consumer<InteretstWithAIViewModel>(
         builder: (context, model, child) {
           return DefaultTabController(
             length: 4, // Number of tabs
             child: Scaffold(
               appBar: AppBar(
                 backgroundColor: transparentColor,
-                title: Text("Home Screen jhgvs"), // Optional AppBar Title
+                title: Text("Interest with AI"), // Optional AppBar Title
               ),
               body: Column(
                 children: [

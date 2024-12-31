@@ -1,13 +1,15 @@
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/model/nearby_matches_model.dart';
+import 'package:code_structure/core/model/nearby_model.dart';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
-class CustomNearbyMatchesWidget extends StatelessWidget {
-  NearbyMatchesModel Object_nearbyMatches = NearbyMatchesModel();
-  CustomNearbyMatchesWidget({super.key, required this.Object_nearbyMatches});
+class CustomNearbyWidget extends StatelessWidget {
+  NearbyScreenModel Object_nearby = NearbyScreenModel();
+  CustomNearbyWidget({super.key, required this.Object_nearby});
 
   @override
   Widget build(BuildContext context) {
@@ -23,7 +25,7 @@ class CustomNearbyMatchesWidget extends StatelessWidget {
       ], color: whiteCoolor, borderRadius: BorderRadius.circular(18)),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Image.asset(
-          "${Object_nearbyMatches.imgUrl}",
+          "${Object_nearby.imgUrl}",
           fit: BoxFit.cover,
           height: 186,
           width: double.infinity,
@@ -37,19 +39,19 @@ class CustomNearbyMatchesWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "${Object_nearbyMatches.GroupName}",
+                "${Object_nearby.GroupName}",
                 style: GoogleFonts.nunito(
                     fontWeight: FontWeight.w800, fontSize: 17),
               ),
               SizedBox(
                 height: 8,
               ),
-              Text("${Object_nearbyMatches.time}"),
-              Text("${Object_nearbyMatches.day}"),
+              Text("${Object_nearby.time}"),
+              Text("${Object_nearby.day}"),
               SizedBox(
                 height: 8,
               ),
-              Text("${Object_nearbyMatches.message}")
+              Text("${Object_nearby.message}")
             ],
           ),
         )

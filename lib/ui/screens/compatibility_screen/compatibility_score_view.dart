@@ -1,5 +1,6 @@
+import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/custom_widgets/friend_zone/expended_+_icon_button.dart';
-import 'package:code_structure/custom_widgets/friend_zone/expended_button.dart';
+import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/key_factor_CS.dart';
 import 'package:code_structure/ui/screens/compatibility_screen/compatibility_score_view_model.dart';
 import 'package:flutter/material.dart';
@@ -59,7 +60,16 @@ class _CompatibiltyScoreState extends State<CompatibiltyScore> {
                             "add user profile type info check in Figma i made a custom widget but ..."),
                       ),
                       20.verticalSpace,
-                      Center(child: CustomExpendButton(text: "Add to Network")),
+
+                      ///
+                      /// Custom Button
+                      ///
+                      CustomButton(
+                        name: "Add to Network",
+                        onPressed: () {},
+                        textColor: whiteCoolor,
+                      ),
+
                       20.verticalSpace,
                       Padding(
                         padding: const EdgeInsets.all(8.0),

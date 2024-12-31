@@ -4,12 +4,13 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
-class CustomHomeMatcheswidget extends StatelessWidget {
-  HomeMatchesModel Object_homeMatches = HomeMatchesModel();
+class CustomInterestWithAIMatcheswidget extends StatelessWidget {
+  HomeMatchesModel Object_InteretWithAIMatches = HomeMatchesModel();
   // final String imgUrl;
   // final String tittle;
   // final String subtittle;
-  CustomHomeMatcheswidget({super.key, required this.Object_homeMatches
+  CustomInterestWithAIMatcheswidget(
+      {super.key, required this.Object_InteretWithAIMatches
 
       // required this.imgUrl,
       // required this.tittle,
@@ -19,7 +20,7 @@ class CustomHomeMatcheswidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 185.h,
+      height: 178.h,
       width: 140.w,
       decoration: BoxDecoration(
           color: Color(0xffffcfdff),
@@ -31,7 +32,7 @@ class CustomHomeMatcheswidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.all(5.0),
             child: Image.asset(
-              "${Object_homeMatches.ImgUrl}",
+              "${Object_InteretWithAIMatches.ImgUrl}",
               fit: BoxFit.cover,
               width: double.infinity,
               height: 130,
@@ -40,7 +41,7 @@ class CustomHomeMatcheswidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 10.0),
             child: Text(
-              "${Object_homeMatches.name}",
+              "${Object_InteretWithAIMatches.name}",
               style:
                   GoogleFonts.nunito(fontWeight: FontWeight.w800, fontSize: 17),
             ),
@@ -48,7 +49,7 @@ class CustomHomeMatcheswidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 10),
             child: Text(
-              "${Object_homeMatches.location}",
+              "${Object_InteretWithAIMatches.location}",
               style: TextStyle(
                   fontSize: 11,
                   fontWeight: FontWeight.w500,

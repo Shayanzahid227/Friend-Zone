@@ -8,20 +8,22 @@ import 'package:code_structure/custom_widgets/friend_zone/nearby_matches.dart';
 
 import 'package:code_structure/custom_widgets/friend_zone/schedual_meetups.dart';
 import 'package:code_structure/custom_widgets/friend_zone/shrink_button.dart';
-import 'package:code_structure/ui/screens/dash_board/dash_board_veiw_model.dart';
+import 'package:code_structure/ui/screens/compatibility_screen/compatibility_score_view.dart';
+import 'package:code_structure/ui/screens/home_screen/home_screen_veiw_model.dart';
+import 'package:code_structure/ui/screens/nearby_matches/nearby_view.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import 'package:provider/provider.dart';
 
-class DashBoardScreen extends StatefulWidget {
-  const DashBoardScreen({super.key});
+class HomeScreen extends StatefulWidget {
+  const HomeScreen({super.key});
 
   @override
-  State<DashBoardScreen> createState() => _DashBoardScreenState();
+  State<HomeScreen> createState() => _HomeScreenState();
 }
 
-class _DashBoardScreenState extends State<DashBoardScreen> {
+class _HomeScreenState extends State<HomeScreen> {
   bool _isSelectedSchedaul = true;
   @override
   void initState() {
@@ -40,9 +42,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenheight = MediaQuery.of(context).size.height;
     return ChangeNotifierProvider(
-      create: (context) => DashBoardVeiwModel(),
-      child: Consumer<DashBoardVeiwModel>(
+      create: (context) => HomeScreenVeiwModel(),
+      child: Consumer<HomeScreenVeiwModel>(
           builder: (context, model, child) => Scaffold(
+                appBar: AppBar(
+                  backgroundColor: whiteCoolor,
+                  title: Text("Friend Zone"),
+                ),
                 backgroundColor: Colors.white,
                 body: Padding(
                   padding: EdgeInsets.symmetric(horizontal: 20),
@@ -54,22 +60,6 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                       children: [
                         SizedBox(
                           height: 15,
-                        ),
-                        TextFormField(
-                          decoration: authFieldDecoration.copyWith(
-                              prefixIcon: Icon(Icons.search_sharp),
-                              hintText:
-                                  "Search for friends,Groups or Events...",
-                              fillColor: Color(0xfff25397e % 15),
-                              filled: true,
-                              enabledBorder: OutlineInputBorder(
-                                  borderRadius: BorderRadius.circular(20),
-                                  borderSide:
-                                      BorderSide(color: Color(0xffffafbff))),
-                              focusedBorder: OutlineInputBorder(
-                                  borderSide: BorderSide(
-                                      color: Color(0xffffafbff % 10)),
-                                  borderRadius: BorderRadius.circular(20))),
                         ),
                         Text(
                           "Yor Dashboard",
@@ -98,7 +88,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                       padding:
                                           const EdgeInsets.only(right: 10.0),
                                       child: GestureDetector(
-                                          onTap: () {},
+                                          onTap: () {
+                                            Navigator.push(
+                                                context,
+                                                MaterialPageRoute(
+                                                    builder: (context) =>
+                                                        CompatibiltyScore()));
+                                          },
                                           child: CustomCompatibilityScorewidget(
                                               object_CompitableScore:
                                                   model.listcompatibilityscore[
@@ -144,7 +140,13 @@ class _DashBoardScreenState extends State<DashBoardScreen> {
                                       padding:
                                           const EdgeInsets.only(right: 20.0),
                                       child: GestureDetector(
-                                        onTap: () {},
+                                        onTap: () {
+                                          Navigator.push(
+                                              context,
+                                              MaterialPageRoute(
+                                                  builder: (context) =>
+                                                      NearbyScreen()));
+                                        },
                                         child: CustomNearbyMatchesWidget(
                                             Object_nearbyMatches:
                                                 model.listNearbyMatches[index]),
