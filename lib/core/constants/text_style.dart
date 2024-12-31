@@ -1,23 +1,46 @@
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 ///***********************************    Medium             ********************************************************************** */
 
-const style25 =
-    TextStyle(fontSize: 25, color: blackColor, fontWeight: FontWeight.w600);
-const style16 =
-    TextStyle(fontSize: 16, color: blackColor, fontWeight: FontWeight.w400);
-const style14 =
-    TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.w400);
+final style25 = GoogleFonts.nunito(
+  fontSize: 25,
+  color: Colors.white,
+  fontWeight: FontWeight.w700,
+);
+
+final style16 = GoogleFonts.nunito(
+  fontSize: 16,
+  color: Colors.white,
+  fontWeight: FontWeight.w600,
+);
+
+final style14 = GoogleFonts.nunito(
+  fontSize: 14,
+  color: Colors.white,
+  fontWeight: FontWeight.w500,
+);
 
 ///***********************************    Normal             ********************************************************************** */
 
-const style25N =
-    TextStyle(fontSize: 25, color: blackColor, fontWeight: FontWeight.w300);
-const style16N =
-    TextStyle(fontSize: 16, color: blackColor, fontWeight: FontWeight.w300);
-const style14N =
-    TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.w300);
+final style25N = GoogleFonts.nunito(
+  fontSize: 25,
+  color: Colors.white,
+  fontWeight: FontWeight.w500,
+);
+
+final style16N = GoogleFonts.nunito(
+  fontSize: 16,
+  color: Colors.white,
+  fontWeight: FontWeight.w500,
+);
+
+final style14N = GoogleFonts.nunito(
+  fontSize: 14,
+  color: Colors.white,
+  fontWeight: FontWeight.w500,
+);
 
 ///
 ///**********************************    Bold             ********************************************************************** */

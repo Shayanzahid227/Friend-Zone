@@ -1,3 +1,4 @@
+import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/custom_widgets/friend_zone/expended_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/your_matches.dart';
 import 'package:code_structure/custom_widgets/friend_zone/your_matches_comment.dart';
@@ -75,9 +76,19 @@ class _SwipTabYourMatvhesState extends State<SwipTabYourMatvhes> {
                           ),
                         ),
                         25.verticalSpace,
-                        CustomExpendButton(text: "Button Lable"),
+                        CustomButton(
+                          name: "Button Lable",
+                          onPressed: () {},
+                          textColor: whiteCoolor,
+                        ),
+
                         26.verticalSpace,
-                        CustomExpendButton(text: "Save for Later"),
+
+                        CustomButton(
+                          name: "Save for Later",
+                          onPressed: () {},
+                          textColor: whiteCoolor,
+                        ),
                         40.verticalSpace
                       ],
                     ),

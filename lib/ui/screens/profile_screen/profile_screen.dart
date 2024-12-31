@@ -58,7 +58,15 @@ class _ProfileScreenState extends State<ProfileScreen> {
                   children: [
                     50.verticalSpace,
 
-                    CustomExpendButton(text: "Follow"),
+                    ///
+                    /// Custom Button
+                    ///
+                    CustomButton(
+                      name: "Follow",
+                      onPressed: () {},
+                      textColor: whiteCoolor,
+                    ),
+
                     25.verticalSpace,
                     Text(
                       "Multimedia Introduction",

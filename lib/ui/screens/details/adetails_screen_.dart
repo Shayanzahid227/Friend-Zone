@@ -1,4 +1,5 @@
 import 'package:code_structure/core/constants/app_asset.dart';
+import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/custom_widgets/friend_zone/details_idk.dart';
 import 'package:code_structure/custom_widgets/friend_zone/expended_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/up_coming_events_detail.dart';
@@ -35,8 +36,14 @@ class _DetailsScreenState extends State<DetailsScreen> {
                       ),
                       Text("add user info with DP here "),
                       30.verticalSpace,
-                      CustomExpendButton(
-                        text: "Follow",
+
+                      ///
+                      /// Custom Button
+                      ///
+                      CustomButton(
+                        name: "Follow",
+                        onPressed: () {},
+                        textColor: whiteCoolor,
                       ),
                       20.verticalSpace,
                       SizedBox(
@@ -113,7 +120,16 @@ class _DetailsScreenState extends State<DetailsScreen> {
                         ),
                       ),
                       30.verticalSpace,
-                      CustomExpendButton(text: "Join Chat"),
+
+                      ///
+                      /// Custom Button
+                      ///
+                      CustomButton(
+                        name: "Join Chat",
+                        onPressed: () {},
+                        textColor: whiteCoolor,
+                      ),
+
                       100.verticalSpace
                     ],
                   ),

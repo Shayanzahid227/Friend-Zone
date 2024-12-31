@@ -1,81 +1,67 @@
-import 'package:flutter/material.dart';
+// ignore_for_file: must_be_immutable, library_private_types_in_public_api, use_super_parameters
 
 import 'package:code_structure/core/constants/colors.dart';
+import 'package:code_structure/core/constants/text_style.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class CustomExpendButton extends StatefulWidget {
-  final String text; // String for the button text
-  // final Icon icon; // Icon for the button
+class CustomButton extends StatefulWidget {
+  String? name;
+  VoidCallback? onPressed;
+  Color? textColor;
 
-  const CustomExpendButton({
-    super.key,
-    // required this.icon, // Required icon
-    required this.text, // Required text
-  });
+  CustomButton({
+    Key? key,
+    required this.name,
+    required this.onPressed,
+    this.textColor,
+  }) : super(key: key);
 
   @override
-  State<CustomExpendButton> createState() => _CustomExpendButtonState();
+  _CustomButtonState createState() => _CustomButtonState();
 }
 
-class _CustomExpendButtonState extends State<CustomExpendButton> {
-  bool isSelected = true;
-  @override
-  void initState() {
-    super.initState();
-  }
-
-  void onClick() {
-    setState(() {
-      isSelected = !isSelected;
-    });
-  }
+class _CustomButtonState extends State<CustomButton> {
+  bool _isPressed = false;
 
   @override
   Widget build(BuildContext context) {
-    double screenWidth = MediaQuery.of(context).size.width;
-    double screenHeight = MediaQuery.of(context).size.height;
-
     return GestureDetector(
-      onTap: () {
-        onClick();
-      }, // Call the onTap function passed during widget creation
-      child: Container(
-        decoration:
-            BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20))),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          mainAxisAlignment:
-              MainAxisAlignment.center, // Center content vertically
-          children: [
-            Container(
-              height: screenHeight * 0.05,
-              width: screenWidth * 0.8,
+      onTapDown: (_) {
+        setState(() {
+          _isPressed = true;
+        });
+      },
+      onTapUp: (_) {
+        setState(() {
+          _isPressed = false;
+        });
+        widget.onPressed?.call();
+      },
+      onTapCancel: () {
+        setState(() {
+          _isPressed = false;
+        });
+      },
+      child: AnimatedScale(
+        scale: _isPressed ? 0.95 : 1.0,
+        duration: const Duration(milliseconds: 100),
+        child: Padding(
+          padding: const EdgeInsets.only(top: 20.0, bottom: 20),
+          child: Align(
+            alignment: Alignment.bottomCenter,
+            child: Container(
+              alignment: Alignment.center,
+              height: 56.h,
               decoration: BoxDecoration(
-                border: Border.all(
-                  width: 1,
-                  color: borderColor.withOpacity(0.20),
-                ),
-                color: isSelected ? buttonColor : transparentColor,
-                borderRadius: BorderRadius.circular(40),
-              ),
-              child: Center(
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    //  icon,
-                    // SizedBox(width: 8),
-                    Text(
-                      widget.text,
-                      style: TextStyle(
-                        fontWeight: FontWeight.w500,
-                        fontSize: 17,
-                        color: Colors.black,
-                      ),
-                    ),
-                  ],
-                ),
+                  color: buttonColor,
+                  borderRadius: BorderRadius.circular(96.r)),
+              child: Text(
+                "${widget.name}",
+                style: style16B.copyWith(color: widget.textColor ?? blackColor),
               ),
             ),
-          ],
+          ),
         ),
       ),
     );

@@ -1,4 +1,5 @@
 import 'package:code_structure/core/constants/app_asset.dart';
+import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/custom_widgets/friend_zone/account_settings.dart';
 import 'package:code_structure/custom_widgets/friend_zone/expended_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/notification_setting.dart';
@@ -121,9 +122,27 @@ class _AccountNotificationSettingViewState
               title: "Update Password",
             ),
             30.verticalSpace,
-            Center(child: CustomExpendButton(text: "Log Out of All Devices")),
+
+            ///
+            /// Custom Button
+            ///
+            CustomButton(
+              name: "Log Out of All Devices",
+              onPressed: () {},
+              textColor: whiteCoolor,
+            ),
+
             30.verticalSpace,
-            Center(child: CustomExpendButton(text: "Delete My Account")),
+
+            ///
+            /// Custom Button
+            ///
+            CustomButton(
+              name: "Delete My Account",
+              onPressed: () {},
+              textColor: whiteCoolor,
+            ),
+
             150.verticalSpace
           ],
         ),
