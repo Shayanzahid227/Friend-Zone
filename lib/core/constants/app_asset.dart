@@ -7,6 +7,7 @@ class AppAssets {
   /// Static Assets
   ///
   String app_logo = "$staticAssets/app_logo.png";
+  String app_start = "$staticAssets/app_start.png";
 
   ///
   /// Dynamic Assets

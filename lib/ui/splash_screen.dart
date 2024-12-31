@@ -1,5 +1,5 @@
 import 'package:code_structure/core/constants/strings.dart';
-import 'package:code_structure/ui/auth/login/login_screen.dart';
+import 'package:code_structure/ui/screens/auth/login/login_screen.dart';
 import 'package:flutter/material.dart';
 
 class SplashScreen_0 extends StatefulWidget {
