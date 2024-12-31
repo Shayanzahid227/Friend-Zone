@@ -1,4 +1,5 @@
 import 'package:code_structure/ui/screens/account_setting/notification_settings.dart';
+import 'package:code_structure/ui/screens/auth/login/login_screen.dart';
 import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
 import 'package:code_structure/ui/start_screen.dart';
 
@@ -22,6 +23,6 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(scaffoldBackgroundColor: const Color(0xffFAF8F6)),
-            home: StartScreen()));
+            home: LoginScreen()));
   }
 }
