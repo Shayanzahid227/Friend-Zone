@@ -1,6 +1,3 @@
-import 'package:code_structure/ui/screens/auth/login/login_screen.dart';
-import 'package:code_structure/ui/screens/auth/sign_in/sign_in_screen.dart';
-import 'package:code_structure/ui/screens/nearby_matches/nearby_view.dart';
 import 'package:code_structure/ui/start_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -7,7 +7,7 @@ import 'package:code_structure/custom_widgets/buttons/social_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/text_feild.dart';
 import 'package:code_structure/ui/screens/auth/sign_in/sign_in_screen.dart';
 import 'package:code_structure/ui/screens/Interest_with_ai/interest_with_ai.dart';
-import 'package:code_structure/ui/screens/home_screen/home_screen_veiw.dart';
+import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

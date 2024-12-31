@@ -1,6 +1,7 @@
 class SchedualMeetupsModel {
+  String? id;
   String? imgUrl;
-  String? tiitle;
-  String? subtittle;
-  SchedualMeetupsModel({this.imgUrl, this.tiitle, this.subtittle});
+  String? title;
+  String? dateAndTime;
+  SchedualMeetupsModel({this.id, this.imgUrl, this.title, this.dateAndTime});
 }

@@ -21,8 +21,8 @@ class CustomSocialIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 65.h,
-      width: 381.w,
+      padding: EdgeInsets.all(5),
+      margin: EdgeInsets.symmetric(horizontal: 10),
       decoration: BoxDecoration(
         color: color, // Background color of the container
         borderRadius: BorderRadius.circular(48),
@@ -38,7 +38,7 @@ class CustomSocialIconButton extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: [
               Image.asset(
-                imagePath, scale: 1.8, // Path to your image asset
+                imagePath, scale: 3, // Path to your image asset
               ),
               Text(
                 "Continue with Facebook",

@@ -21,8 +21,8 @@ class CustomCompatibilityScorewidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 185.h,
-      width: 140.w,
+      width: 150.w,
+      margin: EdgeInsets.only(left: 10),
       decoration: BoxDecoration(
           color: Color(0xffffcfdff),
           border: Border.all(color: Color(0xfff49526e20)),
