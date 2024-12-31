@@ -1,13 +1,17 @@
-import 'package:code_structure/core/model/schedual_meetups.dart';
+// ignore_for_file: use_key_in_widget_constructors, non_constant_identifier_names, deprecated_member_use
+
+import 'package:code_structure/core/constants/colors.dart';
+import 'package:code_structure/core/constants/strings.dart';
+import 'package:code_structure/core/model/up_coming_activities.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
-class CustomScheduleMeetUpsWidget extends StatelessWidget {
-  SchedualMeetupsModel Object_scgedualMeetUps = SchedualMeetupsModel();
-  CustomScheduleMeetUpsWidget(
-      {super.key, required this.Object_scgedualMeetUps});
+class CustomUpcomingEvents extends StatelessWidget {
+  UpComingActivities upComingActivities = UpComingActivities();
+
+  CustomUpcomingEvents({required this.upComingActivities});
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +22,10 @@ class CustomScheduleMeetUpsWidget extends StatelessWidget {
       // height: screenheight * 0.3,
       width: screenWidth * 0.44,
       decoration: BoxDecoration(
-          color: Colors.white,
+          color: whiteCoolor,
           boxShadow: [
             BoxShadow(
-                color: Colors.black.withOpacity(0.08),
+                color: blackColor.withOpacity(0.08),
                 offset: const Offset(0.0, 2),
                 blurRadius: 7.r,
                 spreadRadius: 0)
@@ -36,7 +40,7 @@ class CustomScheduleMeetUpsWidget extends StatelessWidget {
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10.r),
               image: DecorationImage(
-                  image: AssetImage("${Object_scgedualMeetUps.imgUrl}"),
+                  image: AssetImage("${upComingActivities.imgUrl}"),
                   fit: BoxFit.cover),
             ),
           ),
@@ -46,7 +50,7 @@ class CustomScheduleMeetUpsWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 5.0),
             child: Text(
-              "${Object_scgedualMeetUps.title}",
+              "${upComingActivities.title}",
               style:
                   GoogleFonts.nunito(fontWeight: FontWeight.w800, fontSize: 17),
             ),
@@ -54,7 +58,7 @@ class CustomScheduleMeetUpsWidget extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(left: 5.0),
             child: Text(
-              "${Object_scgedualMeetUps.dateAndTime}",
+              "${upComingActivities.dateAndTime}",
               style: TextStyle(
                   fontSize: 13,
                   fontWeight: FontWeight.w400,

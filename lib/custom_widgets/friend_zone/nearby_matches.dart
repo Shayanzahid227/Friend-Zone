@@ -1,3 +1,5 @@
+// ignore_for_file: deprecated_member_use
+
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/model/nearby_matches_model.dart';
 import 'package:flutter/material.dart';
@@ -11,22 +13,28 @@ class CustomNearbyMatchesWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    double screenHeights = MediaQuery.of(context).size.height;
-    double ScreenWidth = MediaQuery.of(context).size.width;
     return Container(
-      decoration: BoxDecoration(boxShadow: [
-        BoxShadow(
-            color: Colors.black,
-            offset: const Offset(0.0, 0),
-            blurRadius: 0.r,
-            spreadRadius: 0.1)
-      ], color: whiteCoolor, borderRadius: BorderRadius.circular(18)),
+      margin: EdgeInsets.only(left: 8, bottom: 8),
+      decoration: BoxDecoration(
+        color: whiteCoolor,
+        borderRadius: BorderRadius.circular(18.r),
+        boxShadow: [
+          BoxShadow(
+              color: blackColor.withOpacity(0.08),
+              offset: const Offset(0.0, 2),
+              blurRadius: 7.r,
+              spreadRadius: 0)
+        ],
+      ),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-        Image.asset(
-          "${Object_nearbyMatches.imgUrl}",
-          fit: BoxFit.cover,
-          height: 186,
-          width: double.infinity,
+        ClipRRect(
+          borderRadius: BorderRadius.only(
+              topRight: Radius.circular(18.r), topLeft: Radius.circular(18.r)),
+          child: Image.asset(
+            "${Object_nearbyMatches.imgUrl}",
+            height: 150,
+            // width: double.infinity,
+          ),
         ),
         SizedBox(
           height: 20,

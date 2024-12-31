@@ -1,6 +1,4 @@
-import 'package:code_structure/core/others/base_view_model.dart';
-
-class NearbyMatchesModel extends BaseViewModel {
+class NearbyMatchesModel {
   String? imgUrl;
   String? GroupName;
   String? day;

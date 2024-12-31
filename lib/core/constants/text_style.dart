@@ -45,9 +45,25 @@ final style14N = GoogleFonts.nunito(
 ///
 ///**********************************    Bold             ********************************************************************** */
 
-const style25B =
-    TextStyle(fontSize: 25, color: blackColor, fontWeight: FontWeight.bold);
-const style16B =
-    TextStyle(fontSize: 16, color: blackColor, fontWeight: FontWeight.bold);
-const style14B =
-    TextStyle(fontSize: 14, color: Colors.white, fontWeight: FontWeight.bold);
+final style25B = GoogleFonts.nunito(
+  fontSize: 25,
+  color: Colors.white,
+  fontWeight: FontWeight.w500,
+);
+
+final style24B = GoogleFonts.nunito(
+  fontSize: 24,
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
+);
+final style16B = GoogleFonts.nunito(
+  fontSize: 16,
+  color: Colors.white,
+  fontWeight: FontWeight.bold,
+);
+
+final style14B = GoogleFonts.nunito(
+  fontSize: 14,
+  color: Colors.white,
+  fontWeight: FontWeight.w500,
+);

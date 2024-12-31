@@ -6,7 +6,7 @@ import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/buttons/social_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/text_feild.dart';
 import 'package:code_structure/ui/screens/auth/login/login_screen.dart';
-import 'package:code_structure/ui/screens/home_screen/home_screen_veiw.dart';
+import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

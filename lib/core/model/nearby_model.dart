@@ -1,6 +1,4 @@
-import 'package:code_structure/core/others/base_view_model.dart';
-
-class NearbyScreenModel extends BaseViewModel {
+class NearbyScreenModel {
   String? imgUrl;
   String? GroupName;
   String? day;
