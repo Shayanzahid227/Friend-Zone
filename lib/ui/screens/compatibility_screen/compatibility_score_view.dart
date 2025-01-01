@@ -3,8 +3,6 @@
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/constants/strings.dart';
 import 'package:code_structure/core/constants/text_style.dart';
-import 'package:code_structure/custom_widgets/friend_zone/expended_+_icon_button.dart';
-import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/key_factor_CS.dart';
 import 'package:code_structure/ui/screens/compatibility_screen/compatibility_score_view_model.dart';
 import 'package:flutter/material.dart';
@@ -42,10 +40,13 @@ class _CompatibiltyScoreState extends State<CompatibiltyScore> {
                                 onPressed: () {
                                   Navigator.pop(context);
                                 },
-                                icon: Icon(Icons.arrow_back)),
+                                icon: Icon(
+                                  Icons.arrow_back,
+                                  color: blackColor,
+                                )),
                             Text(
                               "Compatibility",
-                              style: style24B,
+                              style: style24B.copyWith(color: blackColor),
                             ),
                           ],
                         ),

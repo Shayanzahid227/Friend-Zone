@@ -9,6 +9,9 @@ import 'package:code_structure/custom_widgets/friend_zone/schedual_meetups.dart'
 import 'package:code_structure/ui/screens/compatibility_screen/compatibility_score_view.dart';
 import 'package:code_structure/ui/screens/home_screen/home_veiw_model.dart';
 import 'package:code_structure/ui/screens/nearby_matches/nearby_view.dart';
+import 'package:code_structure/ui/screens/shedule_events/shedule_events_screen.dart';
+import 'package:code_structure/ui/screens/shedule_meetups/shedule_screen.dart';
+import 'package:code_structure/ui/screens/up_coming/up_coming_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -94,7 +97,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                   color: Colors.black),
                             ),
                             TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              NearbyScreen()));
+                                },
                                 child: Text(
                                   "See All",
                                   style: TextStyle(
@@ -117,7 +126,13 @@ class _HomeScreenState extends State<HomeScreen> {
                               style: style16B.copyWith(color: blackColor),
                             ),
                             TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              UpComingScreen()));
+                                },
                                 child: Text(
                                   "See All",
                                   style: TextStyle(
@@ -144,7 +159,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                   fontSize: 18, fontWeight: FontWeight.w700),
                             ),
                             TextButton(
-                                onPressed: () {},
+                                onPressed: () {
+                                  Navigator.push(
+                                      context,
+                                      MaterialPageRoute(
+                                          builder: (context) =>
+                                              SheduleScreen()));
+                                },
                                 child: Text(
                                   "See All",
                                   style: TextStyle(
@@ -161,89 +182,84 @@ class _HomeScreenState extends State<HomeScreen> {
                       ///
                       _sheduleMeeting(model, screenheight),
                       SizedBox(height: 15),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
-                        child: GestureDetector(
-                          onTap: () {},
-                          child: Container(
-                            width: 170,
-                            padding: EdgeInsets.symmetric(vertical: 10),
-                            decoration: BoxDecoration(
-                                color: buttonColor,
-                                borderRadius: BorderRadius.circular(40)),
-                            child: Row(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                              children: [
-                                Icon(
-                                  Icons.add,
-                                  size: 35,
-                                  color: Colors.white,
+                      Row(
+                        children: [
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            ScheduleEventsScreen()));
+                              },
+                              child: Container(
+                                width: 200,
+                                padding: EdgeInsets.symmetric(
+                                    horizontal: 15, vertical: 10),
+                                decoration: BoxDecoration(
+                                    color: _isSelectedSchedaul
+                                        ? buttonColor
+                                        : Color(0x00000fff),
+                                    borderRadius: BorderRadius.circular(40)),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Icon(
+                                      Icons.calendar_month_outlined,
+                                      size: 30,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      "Schedual Events",
+                                      style: TextStyle(
+                                          fontWeight: FontWeight.w500,
+                                          fontSize: 17,
+                                          color: Colors.white),
+                                    )
+                                  ],
                                 ),
-                                Text(
-                                  "New Group",
-                                  style: GoogleFonts.nunito(
-                                      fontWeight: FontWeight.w800,
-                                      fontSize: 18,
-                                      color: Colors.white),
-                                )
-                              ],
+                              ),
                             ),
                           ),
-                        ),
-                      ),
-                      SizedBox(
-                        height: 15,
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(left: 8.0),
-                        child: Container(
-                          child: GestureDetector(
-                            onTap: () {
-                              setState(() {
-                                // onClick();
-                                //_isSelected = _isSelected;
-                              });
-                            },
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.center,
-                              mainAxisAlignment: MainAxisAlignment.start,
-                              children: [
-                                Container(
-                                  width: 200,
-                                  padding: EdgeInsets.symmetric(
-                                      horizontal: 15, vertical: 10),
-                                  decoration: BoxDecoration(
-                                      color: _isSelectedSchedaul
-                                          ? buttonColor
-                                          : Color(0x00000fff),
-                                      borderRadius: BorderRadius.circular(40)),
-                                  child: Row(
-                                    crossAxisAlignment:
-                                        CrossAxisAlignment.center,
-                                    mainAxisAlignment:
-                                        MainAxisAlignment.spaceEvenly,
-                                    children: [
-                                      Icon(
-                                        Icons.calendar_month_outlined,
-                                        size: 40,
-                                        color: Colors.white,
-                                      ),
-                                      Text(
-                                        "Schedual Events",
-                                        style: TextStyle(
-                                            fontWeight: FontWeight.w500,
-                                            fontSize: 17,
-                                            color: Colors.white),
-                                      )
-                                    ],
-                                  ),
+                          Padding(
+                            padding: const EdgeInsets.only(left: 8.0),
+                            child: GestureDetector(
+                              onTap: () {},
+                              child: Container(
+                                width: 170,
+                                padding: EdgeInsets.symmetric(vertical: 10),
+                                decoration: BoxDecoration(
+                                    color: buttonColor,
+                                    borderRadius: BorderRadius.circular(40)),
+                                child: Row(
+                                  crossAxisAlignment: CrossAxisAlignment.center,
+                                  mainAxisAlignment:
+                                      MainAxisAlignment.spaceEvenly,
+                                  children: [
+                                    Icon(
+                                      Icons.add,
+                                      size: 35,
+                                      color: Colors.white,
+                                    ),
+                                    Text(
+                                      "New Group",
+                                      style: GoogleFonts.nunito(
+                                          fontWeight: FontWeight.w800,
+                                          fontSize: 18,
+                                          color: Colors.white),
+                                    )
+                                  ],
                                 ),
-                              ],
+                              ),
                             ),
                           ),
-                        ),
+                        ],
                       ),
+
                       SizedBox(
                         height: 15,
                       ),
@@ -390,7 +406,12 @@ _upComingEvents(HomeScreenVeiwModel model, double screenheight) {
             itemCount: model.upComingActivites.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          builder: (context) => UpComingScreen()));
+                },
                 child: CustomUpcomingEvents(
                     upComingActivities: model.upComingActivites[index]),
               );
@@ -414,7 +435,10 @@ _sheduleMeeting(HomeScreenVeiwModel model, double screenheight) {
             itemCount: model.listSchedualMeetups.length,
             itemBuilder: (BuildContext context, int index) {
               return GestureDetector(
-                onTap: () {},
+                onTap: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => SheduleScreen()));
+                },
                 child: CustomScheduleMeetUpsWidget(
                     Object_scgedualMeetUps: model.listSchedualMeetups[index]),
               );

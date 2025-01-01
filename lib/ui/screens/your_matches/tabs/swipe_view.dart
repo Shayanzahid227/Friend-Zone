@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/your_matches.dart';

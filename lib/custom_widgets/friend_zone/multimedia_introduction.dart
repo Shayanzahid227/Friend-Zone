@@ -1,10 +1,13 @@
+// ignore_for_file: must_be_immutable
+
 import 'package:code_structure/core/model/profile_multimedia.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomMultiMediaIntrodductionWidget extends StatelessWidget {
   ProfileMultimediaModel Object_profileMultiMedia = ProfileMultimediaModel();
-  CustomMultiMediaIntrodductionWidget({super.key, required this.Object_profileMultiMedia});
+  CustomMultiMediaIntrodductionWidget(
+      {super.key, required this.Object_profileMultiMedia});
 
   @override
   Widget build(BuildContext context) {

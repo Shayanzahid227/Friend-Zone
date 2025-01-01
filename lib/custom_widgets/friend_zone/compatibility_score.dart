@@ -1,3 +1,4 @@
+import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/model/dashbord_Score_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -26,17 +27,20 @@ class CustomCompatibilityScorewidget extends StatelessWidget {
       decoration: BoxDecoration(
           color: Color(0xffffcfdff),
           border: Border.all(color: Color(0xfff49526e20)),
-          borderRadius: BorderRadius.circular(10)),
+          borderRadius: BorderRadius.circular(18)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: 5),
-          Image.asset(
-            "${object_CompitableScore.imgUrl}",
-            fit: BoxFit.contain,
-            scale: 3.2,
+          Container(
             width: double.infinity,
             height: 130,
+            decoration: BoxDecoration(
+                borderRadius: BorderRadius.only(
+                    topLeft: Radius.circular(18),
+                    topRight: Radius.circular(18)),
+                image: DecorationImage(
+                    image: AssetImage("${object_CompitableScore.imgUrl}"),
+                    fit: BoxFit.cover)),
           ),
           Padding(
             padding: const EdgeInsets.only(left: 5.0),
@@ -52,8 +56,8 @@ class CustomCompatibilityScorewidget extends StatelessWidget {
               "${object_CompitableScore.subTittle}",
               style: TextStyle(
                   fontSize: 11,
-                  fontWeight: FontWeight.w500,
-                  color: Color(0xfff141a2e)),
+                  fontWeight: FontWeight.normal,
+                  color: greyColor),
             ),
           ),
         ],
