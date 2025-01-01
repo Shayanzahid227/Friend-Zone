@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:code_structure/core/model/schedual_meetups.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,7 +16,7 @@ class CustomScheduleMeetUpsWidget extends StatelessWidget {
     double screenWidth = MediaQuery.of(context).size.width;
     double screenheight = MediaQuery.of(context).size.height;
     return Container(
-      margin: EdgeInsets.only(left: 8.0),
+      margin: EdgeInsets.only(left: 8.0, bottom: 8),
       // height: screenheight * 0.3,
       width: screenWidth * 0.44,
       decoration: BoxDecoration(

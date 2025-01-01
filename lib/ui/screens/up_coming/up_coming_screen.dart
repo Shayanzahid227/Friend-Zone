@@ -1,23 +1,18 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/constants/text_style.dart';
-import 'package:code_structure/custom_widgets/friend_zone/nearby_screen.dart';
-import 'package:code_structure/ui/screens/nearby_matches/nearby_view_model.dart';
+import 'package:code_structure/custom_widgets/friend_zone/custom_upcoming.dart';
+import 'package:code_structure/ui/screens/up_coming/up_coming_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
-class NearbyScreen extends StatefulWidget {
-  const NearbyScreen({super.key});
-
-  @override
-  State<NearbyScreen> createState() => _NearbyScreenState();
-}
-
-class _NearbyScreenState extends State<NearbyScreen> {
+class UpComingScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (context) => NearbyScreeViewModel(),
-      child: Consumer<NearbyScreeViewModel>(
+      create: (context) => UpComingViewModel(),
+      child: Consumer<UpComingViewModel>(
           builder: (context, model, child) => Scaffold(
                 ///
                 /// App Bar
@@ -31,12 +26,12 @@ class _NearbyScreenState extends State<NearbyScreen> {
                   shrinkWrap: true,
                   gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                       crossAxisCount: 1, childAspectRatio: 1.2),
-                  itemCount: model.listNearbyScreen.length,
+                  itemCount: model.listUpComing.length,
                   itemBuilder: (BuildContext context, int index) {
                     return Padding(
                       padding: const EdgeInsets.all(13.0),
-                      child: CustomNearbyWidget(
-                          Object_nearby: model.listNearbyScreen[index]),
+                      child: CustomUpComing(
+                          upComingModel: model.listUpComing[index]),
                     );
                   },
                 ),
@@ -57,7 +52,7 @@ _appBar(BuildContext context) {
           color: blackColor,
         )),
     title: Text(
-      "Nearby Matches",
+      "Upcoming Activities",
       style: style24B.copyWith(color: blackColor),
     ),
   );

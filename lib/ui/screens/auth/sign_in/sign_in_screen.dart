@@ -1,5 +1,4 @@
 import 'package:code_structure/core/constants/app_asset.dart';
-import 'package:code_structure/core/constants/auth_text_feild.dart';
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/constants/text_style.dart';
 import 'package:code_structure/custom_widgets/buttons/custom_button.dart';

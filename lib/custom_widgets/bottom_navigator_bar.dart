@@ -1,33 +1,37 @@
+import 'package:code_structure/core/constants/text_style.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class CustomBottomNavigatorBar extends StatelessWidget {
   String? image;
   VoidCallback? onTap;
-  Color? boxColor;
   Color? iconColor;
+  String? name;
+  Color? textColor;
   CustomBottomNavigatorBar(
       {super.key,
       required this.image,
       required this.onTap,
-      required this.boxColor,
+      required this.name,
+      required this.textColor,
       required this.iconColor});
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      child: Container(
-        // alignment: Alignment.center,
-        padding: const EdgeInsets.all(10),
-        decoration: BoxDecoration(
-            color: boxColor, borderRadius: BorderRadius.circular(13.r)),
-        child: Image.asset(
-          image!,
-          color: iconColor,
-          scale: 4,
-        ),
+      child: Column(
+        children: [
+          Image.asset(
+            image!,
+            color: iconColor,
+            scale: 4,
+          ),
+          Text(
+            '$name',
+            style: style14B.copyWith(color: textColor),
+          ),
+        ],
       ),
     );
   }

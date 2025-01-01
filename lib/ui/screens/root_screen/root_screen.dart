@@ -1,3 +1,4 @@
+import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/constants/strings.dart';
 import 'package:code_structure/custom_widgets/bottom_navigator_bar.dart';
 import 'package:code_structure/ui/screens/root_screen/root_view_model.dart';
@@ -30,7 +31,7 @@ class RootScreen extends StatelessWidget {
           /// BottomBar
           ///
           bottomNavigationBar: Container(
-            height: 78.h,
+            height: 70.h,
             decoration: BoxDecoration(color: Colors.white, boxShadow: [
               BoxShadow(
                   color: Colors.black.withOpacity(0.08),
@@ -42,54 +43,38 @@ class RootScreen extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                ///
-                ///
-                ///
-                GestureDetector(
+                CustomBottomNavigatorBar(
+                  image: '$iconsAssets/home1.png',
                   onTap: () {
                     model.updatedScreen(0);
                   },
-                  child: Container(
-                    // alignment: Alignment.center,
-                    padding: const EdgeInsets.all(10),
-                    decoration: BoxDecoration(
-                        color: model.selectedScreen == 0
-                            ? const Color(0xffE78377)
-                            : Colors.transparent,
-                        borderRadius: BorderRadius.circular(13.r)),
-                    child: Image.asset(
-                      '$staticAssets/home1.png',
-                      // 0 mean index 0
-                      color: model.selectedScreen == 0
-                          ? Colors.white
-                          : Colors.grey,
-                      scale: 4,
-                    ),
-                  ),
+                  iconColor:
+                      model.selectedScreen == 0 ? Colors.white : Colors.grey,
+                  name: 'Home',
+                  textColor:
+                      model.selectedScreen == 0 ? Colors.white : Colors.grey,
                 ),
-
                 CustomBottomNavigatorBar(
-                  image: '$staticAssets/profile.png',
+                  image: '$iconsAssets/groups1.png',
                   onTap: () {
                     model.updatedScreen(1);
                   },
                   iconColor:
                       model.selectedScreen == 1 ? Colors.white : Colors.grey,
-                  boxColor: model.selectedScreen == 1
-                      ? const Color(0xffE78377)
-                      : Colors.transparent,
+                  name: 'Group',
+                  textColor:
+                      model.selectedScreen == 1 ? Colors.white : Colors.grey,
                 ),
-
                 CustomBottomNavigatorBar(
-                  image: '$staticAssets/detail2.png',
+                  image: '$iconsAssets/profile.png',
                   onTap: () {
                     model.updatedScreen(2);
                   },
                   iconColor:
-                      model.selectedScreen == 2 ? Colors.white : Colors.grey,
-                  boxColor: model.selectedScreen == 2
-                      ? const Color(0xffE78377)
-                      : Colors.transparent,
+                      model.selectedScreen == 2 ? blueColor : Colors.grey,
+                  name: 'Profile',
+                  textColor:
+                      model.selectedScreen == 2 ? blueColor : Colors.grey,
                 ),
               ],
             ),

@@ -1,3 +1,5 @@
+// ignore_for_file: unused_local_variable
+
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/ui/screens/your_matches/tabs/swipe_view.dart';
 

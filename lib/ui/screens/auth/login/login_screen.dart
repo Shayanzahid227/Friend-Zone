@@ -1,13 +1,12 @@
 import 'package:code_structure/core/constants/app_asset.dart';
-import 'package:code_structure/core/constants/auth_text_feild.dart';
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/constants/text_style.dart';
 import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/buttons/social_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/text_feild.dart';
 import 'package:code_structure/ui/screens/auth/sign_in/sign_in_screen.dart';
-import 'package:code_structure/ui/screens/Interest_with_ai/interest_with_ai.dart';
 import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
+import 'package:code_structure/ui/screens/root_screen/root_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -78,7 +77,7 @@ class _LoginScreenState extends State<LoginScreen> {
                   name: "Login",
                   onPressed: () {
                     Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                        MaterialPageRoute(builder: (context) => RootScreen()));
                   }),
             ),
             RichText(

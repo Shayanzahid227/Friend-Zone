@@ -1,15 +1,15 @@
 // ignore_for_file: use_key_in_widget_constructors
 
 import 'package:code_structure/core/constants/colors.dart';
-import 'package:code_structure/core/model/nearby_model.dart';
+import 'package:code_structure/core/model/up_coming_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 // ignore: must_be_immutable
-class CustomNearbyWidget extends StatelessWidget {
-  NearbyScreenModel Object_nearby = NearbyScreenModel();
-  CustomNearbyWidget({required this.Object_nearby});
+class CustomUpComing extends StatelessWidget {
+  UpComingModel upComingModel = UpComingModel();
+  CustomUpComing({required this.upComingModel});
 
   @override
   Widget build(BuildContext context) {
@@ -27,7 +27,7 @@ class CustomNearbyWidget extends StatelessWidget {
           width: double.infinity,
           decoration: BoxDecoration(
               image: DecorationImage(
-                  image: AssetImage("${Object_nearby.imgUrl}"),
+                  image: AssetImage("${upComingModel.imgUrl}"),
                   fit: BoxFit.cover),
               borderRadius: BorderRadius.only(
                   topLeft: Radius.circular(18), topRight: Radius.circular(18))),
@@ -41,19 +41,19 @@ class CustomNearbyWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "${Object_nearby.GroupName}",
+                "${upComingModel.GroupName}",
                 style: GoogleFonts.nunito(
                     fontWeight: FontWeight.w800, fontSize: 17),
               ),
               SizedBox(
                 height: 8,
               ),
-              Text("${Object_nearby.time}"),
-              Text("${Object_nearby.day}"),
+              Text("${upComingModel.time}"),
+              Text("${upComingModel.day}"),
               SizedBox(
                 height: 8,
               ),
-              Text("${Object_nearby.message}")
+              Text("${upComingModel.message}")
             ],
           ),
         )

@@ -1,5 +1,4 @@
 import 'package:code_structure/core/model/profile_2_list_model.dart';
-import 'package:code_structure/core/model/schedual_meetups.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
