@@ -1,9 +1,8 @@
 import 'package:code_structure/core/enums/view_state_model.dart';
 import 'package:code_structure/core/others/base_view_model.dart';
-import 'package:code_structure/ui/screens/details/adetails_screen_.dart';
-import 'package:code_structure/ui/screens/Interest_with_ai/interest_with_ai.dart';
+import 'package:code_structure/ui/screens/group/group_screen.dart';
 import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
-import 'package:code_structure/ui/screens/profile_screen/profile_screen.dart';
+import 'package:code_structure/ui/screens/profile/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 class RootViewModel extends BaseViewModel {
@@ -13,7 +12,7 @@ class RootViewModel extends BaseViewModel {
 
   List<Widget> allScreen = [
     // call screen here according to index
-    HomeScreen(), ProfileScreen(), DetailsScreen(),
+    HomeScreen(), GroupScreen(), ProfileScreen(),
   ];
 
   ///

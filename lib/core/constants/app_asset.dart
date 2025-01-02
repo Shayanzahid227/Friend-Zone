@@ -36,10 +36,18 @@ class AppAssets {
   ///
   /// Icons Assets
   ///
-  String search = "$iconsAssets/search.png";
-  String profile = "$iconsAssets/profile.png";
-  String chat1 = "$iconsAssets/chat1.png";
-  String chat2 = "$iconsAssets/chat2.png";
-  String save = "$iconsAssets/save.png";
-  String more = "$iconsAssets/more.png";
+  static String search = "$iconsAssets/search.png";
+  static String profile = "$iconsAssets/profile.png";
+  static String chat1 = "$iconsAssets/chat1.png";
+  static String chat2 = "$iconsAssets/chat2.png";
+  static String more = "$iconsAssets/more.png";
+  static String saveIcon = "$iconsAssets/save.png";
+  static String notification = "$iconsAssets/Notification.png";
+  static String langauge = "$iconsAssets/langauge.png";
+  static String message = "$iconsAssets/message.png";
+  static String gallery = "$iconsAssets/gallery.png";
+  static String email = "$iconsAssets/Left item.png";
+  static String lock = "$iconsAssets/Lock.png";
+  static String enableTwoFactor = "$iconsAssets/Shield.png";
+  static String hide_profile = "$iconsAssets/hide_profile.png";
 }

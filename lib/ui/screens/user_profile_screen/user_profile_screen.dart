@@ -5,20 +5,20 @@ import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/multimedia_introduction.dart';
 import 'package:code_structure/custom_widgets/friend_zone/profile_2_listyview.dart';
 import 'package:code_structure/custom_widgets/friend_zone/shrink_button.dart';
-import 'package:code_structure/ui/screens/profile_screen/profile_view_model.dart';
+import 'package:code_structure/ui/screens/user_profile_screen/user_profile_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:provider/provider.dart';
 
-class ProfileScreen extends StatefulWidget {
-  const ProfileScreen({super.key});
+class UserProfileScreen extends StatefulWidget {
+  const UserProfileScreen({super.key});
 
   @override
-  State<ProfileScreen> createState() => _ProfileScreenState();
+  State<UserProfileScreen> createState() => _UserProfileScreenState();
 }
 
-class _ProfileScreenState extends State<ProfileScreen> {
+class _UserProfileScreenState extends State<UserProfileScreen> {
   bool isSelected = true;
   @override
   void initState() {

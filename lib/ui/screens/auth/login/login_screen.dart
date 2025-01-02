@@ -50,7 +50,9 @@ class _LoginScreenState extends State<LoginScreen> {
               child: Text(
                 "Login",
                 style: GoogleFonts.nunito(
-                    fontWeight: FontWeight.w800, fontSize: 24),
+                  fontWeight: FontWeight.w800,
+                  fontSize: 24,
+                ),
               ),
             ),
             30.verticalSpace,
@@ -74,6 +76,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.all(14.0),
               child: CustomButton(
+                  textColor: whiteCoolor,
                   name: "Login",
                   onPressed: () {
                     Navigator.push(context,
@@ -115,6 +118,7 @@ class _LoginScreenState extends State<LoginScreen> {
             20.verticalSpace,
             CustomSocialIconButton(
               onPressed: () {},
+              name: "Continue with Facebook",
               imagePath: AppAssets().FacebookIcon,
               color: buttonColor,
               textcolor: whiteCoolor,
@@ -122,12 +126,14 @@ class _LoginScreenState extends State<LoginScreen> {
             15.verticalSpace,
             CustomSocialIconButton(
               onPressed: () {},
+              name: "Continue with Google",
               imagePath: AppAssets().GoogleIcon,
               color: whiteCoolor,
               textcolor: blackColor,
             ),
             15.verticalSpace,
             CustomSocialIconButton(
+              name: "Continue with Apple",
               onPressed: () {},
               imagePath: AppAssets().AppleIcon,
               color: blackColor,
