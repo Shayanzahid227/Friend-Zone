@@ -3,7 +3,7 @@ import 'package:code_structure/core/model/Upcoming_events_detail.dart';
 import 'package:code_structure/core/model/detail_idk.dart';
 import 'package:code_structure/core/others/base_view_model.dart';
 
-class DetailsScreenViewModel extends BaseViewModel {
+class GroupDetailsViewModel extends BaseViewModel {
   ///
   ///
   ///         Details screen first grid view

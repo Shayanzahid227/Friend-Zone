@@ -3,7 +3,9 @@ import 'package:code_structure/core/constants/auth_text_feild.dart';
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/constants/strings.dart';
 import 'package:code_structure/core/constants/text_style.dart';
+import 'package:code_structure/core/model/home_groups.dart';
 import 'package:code_structure/ui/screens/group/group_view_model.dart';
+import 'package:code_structure/ui/screens/group_details/gourp_details_screen_.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:provider/provider.dart';
@@ -84,7 +86,12 @@ _topRecommendations() {
         itemCount: 4,
         itemBuilder: (context, index) {
           return GestureDetector(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => GroupDetailsScreen()));
+            },
             child: SizedBox(
               width: 320,
               // height: 220,
