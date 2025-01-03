@@ -73,7 +73,7 @@ class CustomLocalEventsWidget extends StatelessWidget {
                   IconButton(
                       onPressed: () {},
                       icon: Image.asset(
-                        AppAssets().chat2,
+                        AppAssets.chat2,
                         scale: 4,
                       )),
                   SizedBox(
@@ -82,13 +82,13 @@ class CustomLocalEventsWidget extends StatelessWidget {
                   IconButton(
                       onPressed: () {},
                       icon: Image.asset(
-                        AppAssets().save,
+                        AppAssets.saveIcon,
                         scale: 4,
                       )),
                   IconButton(
                       onPressed: () {},
                       icon: Image.asset(
-                        AppAssets().more,
+                        AppAssets.more,
                         scale: 4,
                       ))
                 ],

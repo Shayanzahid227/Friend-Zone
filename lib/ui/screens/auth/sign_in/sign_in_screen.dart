@@ -116,10 +116,12 @@ class _SignInScreenState extends State<SignInScreen> {
               onPressed: () {},
               imagePath: AppAssets().FacebookIcon,
               color: buttonColor,
+              name: "Continue with Facebook",
               textcolor: whiteCoolor,
             ),
             15.verticalSpace,
             CustomSocialIconButton(
+              name: "Continue with Google",
               onPressed: () {},
               imagePath: AppAssets().GoogleIcon,
               color: whiteCoolor,
@@ -127,6 +129,7 @@ class _SignInScreenState extends State<SignInScreen> {
             ),
             15.verticalSpace,
             CustomSocialIconButton(
+              name: "Continue with Apple",
               onPressed: () {},
               imagePath: AppAssets().AppleIcon,
               color: blackColor,

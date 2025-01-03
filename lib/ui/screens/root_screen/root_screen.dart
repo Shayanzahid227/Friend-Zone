@@ -30,55 +30,86 @@ class RootScreen extends StatelessWidget {
           ///
           /// BottomBar
           ///
-          bottomNavigationBar: Container(
-            height: 70.h,
-            decoration: BoxDecoration(color: Colors.white, boxShadow: [
-              BoxShadow(
-                  color: Colors.black.withOpacity(0.08),
-                  offset: const Offset(0, 1),
-                  blurRadius: 7.r,
-                  spreadRadius: 0),
-            ]),
-            child: Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
-              children: [
-                CustomBottomNavigatorBar(
-                  image: '$iconsAssets/home1.png',
-                  onTap: () {
-                    model.updatedScreen(0);
-                  },
-                  iconColor:
-                      model.selectedScreen == 0 ? Colors.white : Colors.grey,
-                  name: 'Home',
-                  textColor:
-                      model.selectedScreen == 0 ? Colors.white : Colors.grey,
-                ),
-                CustomBottomNavigatorBar(
-                  image: '$iconsAssets/groups1.png',
-                  onTap: () {
-                    model.updatedScreen(1);
-                  },
-                  iconColor:
-                      model.selectedScreen == 1 ? Colors.white : Colors.grey,
-                  name: 'Group',
-                  textColor:
-                      model.selectedScreen == 1 ? Colors.white : Colors.grey,
-                ),
-                CustomBottomNavigatorBar(
-                  image: '$iconsAssets/profile.png',
-                  onTap: () {
-                    model.updatedScreen(2);
-                  },
-                  iconColor:
-                      model.selectedScreen == 2 ? blueColor : Colors.grey,
-                  name: 'Profile',
-                  textColor:
-                      model.selectedScreen == 2 ? blueColor : Colors.grey,
-                ),
-              ],
-            ),
-          ),
+          bottomNavigationBar: BottomNavigationBar(
+              backgroundColor: whiteCoolor,
+              selectedItemColor: blueColor,
+              unselectedItemColor: greyColor,
+              currentIndex: model.selectedScreen,
+              onTap: (index) {
+                model.updatedScreen(index);
+              },
+              items: [
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.home,
+                      size: 30,
+                    ),
+                    label: 'Home'),
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.group,
+                      size: 30,
+                    ),
+                    label: 'Group'),
+                BottomNavigationBarItem(
+                    icon: Icon(
+                      Icons.person,
+                      size: 30,
+                    ),
+                    label: 'Profile'),
+              ]),
+          // bottomNavigationBar: Container(
+          //   height: 70.h,
+          //   decoration: BoxDecoration(color: Colors.white, boxShadow: [
+          //     BoxShadow(
+          //         color: Colors.black.withOpacity(0.08),
+          //         offset: const Offset(0, 1),
+          //         blurRadius: 7.r,
+          //         spreadRadius: 0),
+          //   ]),
+          //   child: Padding(
+          //     padding: const EdgeInsets.only(top: 16.0),
+          //     child: Row(
+          //       crossAxisAlignment: CrossAxisAlignment.center,
+          //       mainAxisAlignment: MainAxisAlignment.spaceAround,
+          //       children: [
+          //         CustomBottomNavigatorBar(
+          //           image: '$iconsAssets/home1.png',
+          //           onTap: () {
+          //             model.updatedScreen(0);
+          //           },
+          //           iconColor:
+          //               model.selectedScreen == 0 ? blueColor : Colors.grey,
+          //           name: 'Home',
+          //           textColor:
+          //               model.selectedScreen == 0 ? blueColor : Colors.grey,
+          //         ),
+          //         CustomBottomNavigatorBar(
+          //           image: '$iconsAssets/groups1.png',
+          //           onTap: () {
+          //             model.updatedScreen(1);
+          //           },
+          //           iconColor:
+          //               model.selectedScreen == 1 ? blueColor : Colors.grey,
+          //           name: 'Group',
+          //           textColor:
+          //               model.selectedScreen == 1 ? blueColor : Colors.grey,
+          //         ),
+          //         CustomBottomNavigatorBar(
+          //           image: '$iconsAssets/profile.png',
+          //           onTap: () {
+          //             model.updatedScreen(2);
+          //           },
+          //           iconColor:
+          //               model.selectedScreen == 2 ? blueColor : Colors.grey,
+          //           name: 'Profile',
+          //           textColor:
+          //               model.selectedScreen == 2 ? blueColor : Colors.grey,
+          //         ),
+          //       ],
+          //     ),
+          //   ),
+          // ),
 
           ///
           /// Right Drawer

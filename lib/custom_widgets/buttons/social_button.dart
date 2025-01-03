@@ -1,5 +1,7 @@
+import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/constants/text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomSocialIconButton extends StatelessWidget {
   final VoidCallback onPressed;
@@ -7,6 +9,7 @@ class CustomSocialIconButton extends StatelessWidget {
   final String imagePath;
   final Color color;
   final textcolor;
+  String? name;
 
   CustomSocialIconButton(
       {super.key,
@@ -14,6 +17,7 @@ class CustomSocialIconButton extends StatelessWidget {
       this.size = 52.0,
       required this.imagePath,
       required this.textcolor,
+      required this.name,
       required this.color});
 
   @override
@@ -24,6 +28,13 @@ class CustomSocialIconButton extends StatelessWidget {
       decoration: BoxDecoration(
         color: color, // Background color of the container
         borderRadius: BorderRadius.circular(48),
+        boxShadow: [
+          BoxShadow(
+              color: blackColor.withOpacity(0.40),
+              offset: Offset(0, 2),
+              blurRadius: 7.r,
+              spreadRadius: 0)
+        ],
         border: Border.all(
             color: Color(0xfff000000 % 12), width: 2), // Border color
       ),
@@ -33,13 +44,16 @@ class CustomSocialIconButton extends StatelessWidget {
             padding: EdgeInsets.zero, // Remove padding for a compact button
           ),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Image.asset(
                 imagePath, scale: 3, // Path to your image asset
               ),
+              SizedBox(
+                width: 15.w,
+              ),
               Text(
-                "Continue with Facebook",
+                "$name",
                 style: style16B.copyWith(fontSize: 17, color: textcolor),
               )
             ],
