@@ -21,7 +21,7 @@ class CustomUpcomingEvents extends StatelessWidget {
       // height: screenheight * 0.3,
       width: screenWidth * 0.44,
       decoration: BoxDecoration(
-          color: whiteCoolor,
+          color: whiteColor,
           boxShadow: [
             BoxShadow(
                 color: blackColor.withOpacity(0.08),

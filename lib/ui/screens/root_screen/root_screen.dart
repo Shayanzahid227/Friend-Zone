@@ -31,7 +31,7 @@ class RootScreen extends StatelessWidget {
           /// BottomBar
           ///
           bottomNavigationBar: BottomNavigationBar(
-              backgroundColor: whiteCoolor,
+              backgroundColor: Colors.black,
               selectedItemColor: blueColor,
               unselectedItemColor: greyColor,
               currentIndex: model.selectedScreen,
@@ -40,18 +40,28 @@ class RootScreen extends StatelessWidget {
               },
               items: [
                 BottomNavigationBarItem(
+                    backgroundColor: whiteColor,
                     icon: Icon(
                       Icons.home,
                       size: 30,
                     ),
                     label: 'Home'),
                 BottomNavigationBarItem(
+                    backgroundColor: whiteColor,
                     icon: Icon(
                       Icons.group,
                       size: 30,
                     ),
                     label: 'Group'),
                 BottomNavigationBarItem(
+                    backgroundColor: whiteColor,
+                    icon: Icon(
+                      Icons.chat,
+                      size: 30,
+                    ),
+                    label: 'chat'),
+                BottomNavigationBarItem(
+                    backgroundColor: whiteColor,
                     icon: Icon(
                       Icons.person,
                       size: 30,

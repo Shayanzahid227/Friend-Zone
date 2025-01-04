@@ -4,8 +4,7 @@ import 'package:code_structure/core/constants/text_style.dart';
 import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/buttons/social_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/text_feild.dart';
-import 'package:code_structure/ui/screens/auth/sign_in/sign_in_screen.dart';
-import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
+import 'package:code_structure/ui/screens/auth/sign_up/sign_up_screen.dart';
 import 'package:code_structure/ui/screens/root_screen/root_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -76,7 +75,7 @@ class _LoginScreenState extends State<LoginScreen> {
             Padding(
               padding: const EdgeInsets.all(14.0),
               child: CustomButton(
-                  textColor: whiteCoolor,
+                  textColor: whiteColor,
                   name: "Login",
                   onPressed: () {
                     Navigator.push(context,
@@ -103,7 +102,7 @@ class _LoginScreenState extends State<LoginScreen> {
                       // Add your navigation logic here (e.g., navigate to sign-up screen)
                       Navigator.push(
                         context,
-                        MaterialPageRoute(builder: (context) => SignInScreen()),
+                        MaterialPageRoute(builder: (context) => SignUpScreen()),
                       );
                     },
                 )
@@ -121,14 +120,14 @@ class _LoginScreenState extends State<LoginScreen> {
               name: "Continue with Facebook",
               imagePath: AppAssets().FacebookIcon,
               color: buttonColor,
-              textcolor: whiteCoolor,
+              textcolor: whiteColor,
             ),
             15.verticalSpace,
             CustomSocialIconButton(
               onPressed: () {},
               name: "Continue with Google",
               imagePath: AppAssets().GoogleIcon,
-              color: whiteCoolor,
+              color: whiteColor,
               textcolor: blackColor,
             ),
             15.verticalSpace,
@@ -137,7 +136,7 @@ class _LoginScreenState extends State<LoginScreen> {
               onPressed: () {},
               imagePath: AppAssets().AppleIcon,
               color: blackColor,
-              textcolor: whiteCoolor,
+              textcolor: whiteColor,
             ),
           ],
         ),

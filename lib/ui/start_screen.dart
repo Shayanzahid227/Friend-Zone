@@ -76,7 +76,7 @@ _bottomTextButton(BuildContext context) {
         Navigator.push(context,
             MaterialPageRoute(builder: (context) => OnboardingScreen()));
       },
-      textColor: whiteCoolor,
+      textColor: whiteColor,
     ),
   );
 }

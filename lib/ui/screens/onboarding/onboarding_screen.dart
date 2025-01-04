@@ -31,6 +31,11 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
               },
               children: [
                 buildPage(
+                    context,
+                    "$staticAssets/freind_zone.png", // Replace with your image path
+                    "Friend Zone",
+                    "Connect, collaborate, and create meaningful friendships.\n Welcome to Friend Zone!"),
+                buildPage(
                   context,
                   "$staticAssets/ai_powered.png", // Replace with your image path
                   "AI-Powered Matches",
@@ -50,6 +55,12 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 ),
                 buildPage(
                   context,
+                  "$staticAssets/shedule.png", // Replace with your image path
+                  "Smart Scheduler",
+                  "Plan activities and events effortlessly.",
+                ),
+                buildPage(
+                  context,
                   "$staticAssets/chat.png", // Replace with your image path
                   "Real-Time Chats",
                   "Chat with friends in real-time.",
@@ -61,7 +72,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: List.generate(
-              4, // Update for the number of pages
+              6, // Update for the number of pages
               (index) => AnimatedContainer(
                 duration: Duration(milliseconds: 300),
                 margin: EdgeInsets.symmetric(horizontal: 4),
@@ -131,7 +142,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
         Container(
           height: 70.h,
           decoration: BoxDecoration(
-            color: whiteCoolor,
+            color: whiteColor,
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
@@ -205,7 +216,7 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
             alignment: Alignment.center,
             child: InkWell(
               onTap: () {
-                if (_currentPage == 3) {
+                if (_currentPage == 5) {
                   Navigator.push(context,
                       MaterialPageRoute(builder: (context) => LoginScreen()));
                 } else {
@@ -219,14 +230,14 @@ class _OnboardingScreenState extends State<OnboardingScreen> {
                 backgroundColor: blueColor,
                 radius: 40.r,
                 child: CircleAvatar(
-                  backgroundColor: whiteCoolor,
+                  backgroundColor: whiteColor,
                   radius: 37.r,
                   child: CircleAvatar(
                     radius: 35.r,
                     backgroundColor: blueColor,
                     child: Text(
-                      _currentPage == 3 ? "Finish" : "Next",
-                      style: style16B.copyWith(color: whiteCoolor),
+                      _currentPage == 5 ? "Finish" : "Next",
+                      style: style16B.copyWith(color: whiteColor),
                     ),
                   ),
                 ),
