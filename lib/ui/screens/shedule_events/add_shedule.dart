@@ -244,7 +244,7 @@ class _OrganizeActivityScreenState extends State<OrganizeActivityScreen> {
               ),
               child: Text(
                 "Send Invites",
-                style: style16B.copyWith(color: whiteCoolor),
+                style: style16B.copyWith(color: whiteColor),
               ),
             ),
             const SizedBox(height: 10),

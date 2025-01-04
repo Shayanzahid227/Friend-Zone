@@ -20,7 +20,7 @@ class CustomUpComing extends StatelessWidget {
             offset: const Offset(0.0, 2),
             blurRadius: 7.r,
             spreadRadius: 0)
-      ], color: whiteCoolor, borderRadius: BorderRadius.circular(18)),
+      ], color: whiteColor, borderRadius: BorderRadius.circular(18)),
       child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Container(
           height: 186,

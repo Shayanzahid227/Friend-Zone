@@ -165,7 +165,7 @@ class ScheduleEventsScreen extends StatelessWidget {
                     style: TextStyle(
                         fontSize: 18,
                         fontWeight: FontWeight.bold,
-                        color: whiteCoolor),
+                        color: whiteColor),
                   ),
                 ),
               ),
@@ -186,7 +186,7 @@ class ScheduleEventsScreen extends StatelessWidget {
           backgroundColor: blueColor,
           child: const Icon(
             Icons.add,
-            color: whiteCoolor,
+            color: whiteColor,
           ),
         ),
       ),
@@ -208,7 +208,7 @@ class ActivityCard extends StatelessWidget {
     return Container(
       margin: const EdgeInsets.symmetric(vertical: 8),
       decoration: BoxDecoration(
-          color: whiteCoolor,
+          color: whiteColor,
           borderRadius: BorderRadius.circular(10),
           border: Border.all(width: 0.2, color: borderColor)),
       child: ListTile(

@@ -50,4 +50,9 @@ class AppAssets {
   static String lock = "$iconsAssets/Lock.png";
   static String enableTwoFactor = "$iconsAssets/Shield.png";
   static String hide_profile = "$iconsAssets/hide_profile.png";
+
+  static String cooking = "$iconsAssets/cooking.png";
+  static String hiking = "$iconsAssets/hiking.png";
+  static String tech = "$iconsAssets/tech.png";
+  static String travel = "$iconsAssets/travel.png";
 }

@@ -16,22 +16,25 @@ class CustomSecondListWidget extends StatelessWidget {
       width: screenWidth * 0.4,
       decoration: BoxDecoration(boxShadow: [
         BoxShadow(
-            color: Colors.black,
-            offset: const Offset(0.1, 2),
-            blurRadius: 2.r,
-            spreadRadius: 1)
-      ], color: Colors.white, borderRadius: BorderRadius.circular(15)),
+            color: Colors.black.withOpacity(0.08),
+            offset: const Offset(0.0, 2),
+            blurRadius: 6.r,
+            spreadRadius: 0)
+      ], color: Colors.white, borderRadius: BorderRadius.circular(18)),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Container(
-            decoration: BoxDecoration(borderRadius: BorderRadius.circular(1)),
-            child: Image.asset(
-              "${Object_Profile_2_list.imgUrl}",
-              fit: BoxFit.cover,
-              width: double.infinity,
-              height: 150.h,
-            ),
+            width: double.infinity,
+            height: 150.h,
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage("${Object_Profile_2_list.imgUrl}"),
+                  fit: BoxFit.cover,
+                ),
+                borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(18.r),
+                    topLeft: Radius.circular(18.r))),
           ),
           SizedBox(
             height: 11,

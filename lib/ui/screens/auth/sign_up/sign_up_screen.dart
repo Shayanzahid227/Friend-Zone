@@ -1,3 +1,5 @@
+// ignore_for_file: use_key_in_widget_constructors
+
 import 'package:code_structure/core/constants/app_asset.dart';
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/constants/text_style.dart';
@@ -5,37 +7,14 @@ import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/buttons/social_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/text_feild.dart';
 import 'package:code_structure/ui/screens/auth/login/login_screen.dart';
+import 'package:code_structure/ui/screens/auth/setup_profile/setup_profile_screen.dart';
 import 'package:code_structure/ui/screens/home_screen/home_screen.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class SignInScreen extends StatefulWidget {
-  const SignInScreen({super.key});
-
-  @override
-  State<SignInScreen> createState() => _SignInScreenState();
-}
-
-class _SignInScreenState extends State<SignInScreen> {
-  //final _auth = FirebaseAuth.instance;
-
-  // Future<void> register() async {
-  //   try {
-  //     await _auth.createUserWithEmailAndPassword(
-  //         email: emailController.text, password: passwordController.text);
-  //   } catch (e) {
-  //     print("SignIn failed: $e");
-  //   }
-  // }
-
-  // TextEditingController emailController = TextEditingController();
-  // TextEditingController passwordController = TextEditingController();
-  // final _fromKey = GlobalKey<FormState>();
-  // final RegExp _emailRegex = RegExp(
-  //   r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$",
-  // );
+class SignUpScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -77,8 +56,10 @@ class _SignInScreenState extends State<SignInScreen> {
               child: CustomButton(
                   name: "Sign Up",
                   onPressed: () {
-                    Navigator.push(context,
-                        MaterialPageRoute(builder: (context) => HomeScreen()));
+                    Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => SetupProfileScreen()));
                   }),
             ),
             RichText(
@@ -117,14 +98,14 @@ class _SignInScreenState extends State<SignInScreen> {
               imagePath: AppAssets().FacebookIcon,
               color: buttonColor,
               name: "Continue with Facebook",
-              textcolor: whiteCoolor,
+              textcolor: whiteColor,
             ),
             15.verticalSpace,
             CustomSocialIconButton(
               name: "Continue with Google",
               onPressed: () {},
               imagePath: AppAssets().GoogleIcon,
-              color: whiteCoolor,
+              color: whiteColor,
               textcolor: blackColor,
             ),
             15.verticalSpace,
@@ -133,7 +114,7 @@ class _SignInScreenState extends State<SignInScreen> {
               onPressed: () {},
               imagePath: AppAssets().AppleIcon,
               color: blackColor,
-              textcolor: whiteCoolor,
+              textcolor: whiteColor,
             ),
           ],
         ),

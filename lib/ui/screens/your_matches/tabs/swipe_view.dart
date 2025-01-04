@@ -81,7 +81,7 @@ class _SwipTabYourMatvhesState extends State<SwipTabYourMatvhes> {
                         CustomButton(
                           name: "Button Lable",
                           onPressed: () {},
-                          textColor: whiteCoolor,
+                          textColor: whiteColor,
                         ),
 
                         26.verticalSpace,
@@ -89,7 +89,7 @@ class _SwipTabYourMatvhesState extends State<SwipTabYourMatvhes> {
                         CustomButton(
                           name: "Save for Later",
                           onPressed: () {},
-                          textColor: whiteCoolor,
+                          textColor: whiteColor,
                         ),
                         40.verticalSpace
                       ],

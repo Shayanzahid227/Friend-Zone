@@ -2,6 +2,7 @@ import 'package:code_structure/core/constants/app_asset.dart';
 import 'package:code_structure/core/constants/colors.dart';
 import 'package:code_structure/core/constants/strings.dart';
 import 'package:code_structure/core/constants/text_style.dart';
+import 'package:code_structure/ui/screens/auth/setup_profile/setup_profile_screen.dart';
 import 'package:code_structure/ui/screens/user_profile_screen/user_profile_view_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -62,9 +63,24 @@ class ProfileScreen extends StatelessWidget {
                   ),
                 ),
                 10.verticalSpace,
-                iconRow(image: AppAssets.lock, name: 'Update Password'),
-                iconRow(image: AppAssets.gallery, name: 'Profile Photo'),
-                iconRow(image: AppAssets.langauge, name: 'Language Settings'),
+                iconRow(
+                    image: AppAssets.lock,
+                    name: 'Update Password',
+                    onPressed: () {}),
+
+                iconRow(
+                    image: AppAssets.gallery,
+                    name: 'Profile Photo',
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => SetupProfileScreen()));
+                    }),
+                iconRow(
+                    image: AppAssets.langauge,
+                    name: 'Language Settings',
+                    onPressed: () {}),
                 30.verticalSpace,
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 20.0),
@@ -77,20 +93,28 @@ class ProfileScreen extends StatelessWidget {
                 20.verticalSpace,
                 iconRow(
                     image: AppAssets.hide_profile,
-                    name: 'Hide Profile from Public Search'),
+                    name: 'Hide Profile from Public Search',
+                    onPressed: () {}),
                 iconRow(
                     image: AppAssets.enableTwoFactor,
-                    name: 'Enable Two-Factor Authentication'),
+                    name: 'Enable Two-Factor Authentication',
+                    onPressed: () {}),
                 iconRow(
                     image: AppAssets.notification,
-                    name: 'Push Notification Settings'),
+                    name: 'Push Notification Settings',
+                    onPressed: () {}),
                 iconRow(
-                    image: AppAssets.email, name: 'Receive Updates via Email'),
+                    image: AppAssets.email,
+                    name: 'Receive Updates via Email',
+                    onPressed: () {}),
                 iconRow(
                     image: AppAssets.message,
-                    name: 'Receive SMS Notifications'),
+                    name: 'Receive SMS Notifications',
+                    onPressed: () {}),
                 iconRow(
-                    image: AppAssets.profile, name: 'Recent Login Activity'),
+                    image: AppAssets.profile,
+                    name: 'Recent Login Activity',
+                    onPressed: () {}),
                 40.verticalSpace,
               ],
             ),
@@ -121,7 +145,7 @@ _profile() {
                 radius: 20.r,
                 child: Icon(
                   Icons.edit,
-                  color: whiteCoolor,
+                  color: whiteColor,
                   size: 20,
                 ),
               ),
@@ -141,21 +165,27 @@ _profile() {
   );
 }
 
-iconRow({required String? image, required String? name}) {
-  return Padding(
-    padding: const EdgeInsets.only(bottom: 20.0, left: 16.0, right: 16.0),
-    child: Row(
-      children: [
-        Image.asset(
-          "$image",
-          scale: 4,
-        ),
-        15.horizontalSpace,
-        Text(
-          "$name",
-          style: style16N.copyWith(color: blackColor, fontSize: 18.sp),
-        ),
-      ],
+iconRow(
+    {required String? image,
+    required String? name,
+    required VoidCallback onPressed}) {
+  return GestureDetector(
+    onTap: onPressed,
+    child: Padding(
+      padding: const EdgeInsets.only(bottom: 20.0, left: 16.0, right: 16.0),
+      child: Row(
+        children: [
+          Image.asset(
+            "$image",
+            scale: 4,
+          ),
+          15.horizontalSpace,
+          Text(
+            "$name",
+            style: style16N.copyWith(color: blackColor, fontSize: 18.sp),
+          ),
+        ],
+      ),
     ),
   );
 }

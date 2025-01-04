@@ -24,7 +24,7 @@ class CustomKeyFactorCompatibilityScoreWidget extends StatelessWidget {
         alignment: Alignment.bottomLeft,
         child: Text(
           "Shared Interests",
-          style: style16B.copyWith(color: whiteCoolor),
+          style: style16B.copyWith(color: whiteColor),
         ),
       ),
     );

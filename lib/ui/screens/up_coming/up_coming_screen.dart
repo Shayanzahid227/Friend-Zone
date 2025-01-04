@@ -42,7 +42,7 @@ class UpComingScreen extends StatelessWidget {
 
 _appBar(BuildContext context) {
   return AppBar(
-    backgroundColor: whiteCoolor,
+    backgroundColor: whiteColor,
     leading: IconButton(
         onPressed: () {
           Navigator.pop(context);

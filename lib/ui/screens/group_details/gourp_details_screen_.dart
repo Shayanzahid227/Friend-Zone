@@ -5,10 +5,12 @@ import 'package:code_structure/core/constants/text_style.dart';
 import 'package:code_structure/custom_widgets/friend_zone/details_idk.dart';
 import 'package:code_structure/custom_widgets/buttons/custom_button.dart';
 import 'package:code_structure/custom_widgets/friend_zone/up_coming_events_detail.dart';
+import 'package:code_structure/ui/screens/chat/chat_screen.dart';
 import 'package:code_structure/ui/screens/group_details/group_detail_view_model.dart';
+import 'package:code_structure/ui/screens/user_profile_screen/user_profile_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
+
 import 'package:provider/provider.dart';
 
 class GroupDetailsScreen extends StatefulWidget {
@@ -52,7 +54,7 @@ class _GroupDetailsScreenState extends State<GroupDetailsScreen> {
                         child: CustomButton(
                           name: "Join",
                           onPressed: () {},
-                          textColor: whiteCoolor,
+                          textColor: whiteColor,
                         ),
                       ),
                       20.verticalSpace,
@@ -78,44 +80,69 @@ class _GroupDetailsScreenState extends State<GroupDetailsScreen> {
                         child: Text("UpComming Events",
                             style: style16B.copyWith(color: blackColor)),
                       ),
+
+                      ///
+                      /// Upcoming Events List view
+                      ///
+                      _upComingActivities(model),
+                      20.verticalSpace,
                       Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SizedBox(
-                          height: 310.h,
-                          child: ListView.builder(
-                            itemCount: model.listUpcomingEvents.length,
-                            scrollDirection: Axis.horizontal,
-                            itemBuilder: (BuildContext context, int index) {
-                              return Padding(
-                                padding: const EdgeInsets.only(right: 10.0),
-                                child: GestureDetector(
-                                  onTap: () {},
-                                  child: CustomUpComingEventsWidget(
-                                      Object_UpComingEvents:
-                                          model.listUpcomingEvents[index]),
-                                ),
-                              );
-                            },
-                          ),
+                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                        child: Text(
+                          "Group Members",
+                          style: style16B.copyWith(color: blackColor),
                         ),
                       ),
-                      Padding(
-                        padding: const EdgeInsets.all(8.0),
-                        child: SizedBox(
-                          height: 50,
-                          child: Text(
-                              "add comment section here i make a model and custom widget also sir using list tile but don't know.... "),
-                        ),
-                      ),
+
+                      ListView.builder(
+                          shrinkWrap: true,
+                          physics: NeverScrollableScrollPhysics(),
+                          itemCount: 5,
+                          itemBuilder: (context, index) {
+                            return ListTile(
+                              onTap: () {
+                                Navigator.push(
+                                    context,
+                                    MaterialPageRoute(
+                                        builder: (context) =>
+                                            UserProfileScreen()));
+                              },
+                              leading: CircleAvatar(
+                                radius: 20.r,
+                                backgroundImage:
+                                    AssetImage("$dynamicAssets/woman.png"),
+                              ),
+                              title: Text(
+                                "Alice",
+                                style: style16B.copyWith(color: blackColor),
+                              ),
+                              subtitle: Text(
+                                "Email",
+                                style: style14N.copyWith(color: greyColor),
+                              ),
+                              trailing: Text(
+                                "10:00 AM",
+                                style: style14N.copyWith(color: greyColor),
+                              ),
+                            );
+                          }),
                       30.verticalSpace,
 
                       ///
                       /// Custom Button
                       ///
-                      CustomButton(
-                        name: "Join Chat",
-                        onPressed: () {},
-                        textColor: whiteCoolor,
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                        child: CustomButton(
+                          name: "Join Chat",
+                          onPressed: () {
+                            Navigator.push(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) => ChatScreen()));
+                          },
+                          textColor: whiteColor,
+                        ),
                       ),
 
                       100.verticalSpace
@@ -141,18 +168,18 @@ _header() {
       children: [
         Text(
           "A group for hiking enthusiasts in your area",
-          style: style16B.copyWith(color: whiteCoolor),
+          style: style16B.copyWith(color: whiteColor),
         ),
         10.verticalSpace,
         Text(
           "Friend Zone",
-          style: style25B.copyWith(color: whiteCoolor),
+          style: style25B.copyWith(color: whiteColor),
         ),
         20.verticalSpace,
         Container(
           padding: EdgeInsets.symmetric(vertical: 10, horizontal: 20),
           decoration: BoxDecoration(
-              color: whiteCoolor, borderRadius: BorderRadius.circular(24.r)),
+              color: whiteColor, borderRadius: BorderRadius.circular(24.r)),
           child: Text(
             "Join",
             style: style14B.copyWith(color: blackColor),
@@ -211,5 +238,28 @@ _gallery(GroupDetailsViewModel model) {
             CustomDetailIdkWidget(Object_DetailIdk: model.listDetailIdk[index]),
       );
     },
+  );
+}
+
+_upComingActivities(GroupDetailsViewModel model) {
+  return SizedBox(
+    height: 340.h,
+    child: ListView.separated(
+      padding: EdgeInsets.symmetric(horizontal: 8.0),
+      itemCount: model.listUpcomingEvents.length,
+      scrollDirection: Axis.horizontal,
+      itemBuilder: (BuildContext context, int index) {
+        return GestureDetector(
+          onTap: () {},
+          child: CustomUpComingEventsWidget(
+              Object_UpComingEvents: model.listUpcomingEvents[index]),
+        );
+      },
+      separatorBuilder: (BuildContext context, int index) {
+        return SizedBox(
+          width: 10.w,
+        );
+      },
+    ),
   );
 }
