@@ -119,7 +119,7 @@ class _AccountSettingViewState extends State<AccountSettingView> {
             CustomButton(
               name: "Log Out of All Devices",
               onPressed: () {},
-              textColor: whiteCoolor,
+              textColor: whiteColor,
             ),
             30.verticalSpace,
 
@@ -129,7 +129,7 @@ class _AccountSettingViewState extends State<AccountSettingView> {
             CustomButton(
               name: "Delete My Account",
               onPressed: () {},
-              textColor: whiteCoolor,
+              textColor: whiteColor,
             ),
 
             150.verticalSpace

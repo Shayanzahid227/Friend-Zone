@@ -16,7 +16,7 @@ class CustomNearbyMatchesWidget extends StatelessWidget {
     return Container(
       margin: EdgeInsets.only(left: 8, bottom: 8),
       decoration: BoxDecoration(
-        color: whiteCoolor,
+        color: whiteColor,
         borderRadius: BorderRadius.circular(18.r),
         boxShadow: [
           BoxShadow(

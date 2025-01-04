@@ -24,12 +24,19 @@ class MyApp extends StatelessWidget {
         child: MaterialApp(
             debugShowCheckedModeBanner: false,
             theme: ThemeData(
-                scaffoldBackgroundColor: whiteCoolor,
+                bottomAppBarTheme: BottomAppBarTheme(
+                    color: Colors.white,
+                    shadowColor: Colors.white,
+                    surfaceTintColor: Colors.white),
+                bottomNavigationBarTheme: BottomNavigationBarThemeData(
+                  backgroundColor: whiteColor,
+                ),
+                scaffoldBackgroundColor: whiteColor,
                 appBarTheme: AppBarTheme(
-                    backgroundColor: whiteCoolor,
-                    surfaceTintColor: whiteCoolor,
-                    shadowColor: whiteCoolor,
-                    foregroundColor: whiteCoolor),
+                    backgroundColor: whiteColor,
+                    surfaceTintColor: whiteColor,
+                    shadowColor: whiteColor,
+                    foregroundColor: whiteColor),
 
                 ///
                 /// Font Family

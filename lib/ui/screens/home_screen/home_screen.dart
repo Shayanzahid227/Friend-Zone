@@ -316,7 +316,7 @@ class _HomeScreenState extends State<HomeScreen> {
 _appBar() {
   return AppBar(
     automaticallyImplyLeading: false,
-    backgroundColor: whiteCoolor,
+    backgroundColor: whiteColor,
     title: Text(
       "Friend Zone",
       style: style24B.copyWith(color: blackColor),
