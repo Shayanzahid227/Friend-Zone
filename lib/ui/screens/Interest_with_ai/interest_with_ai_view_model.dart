@@ -60,7 +60,7 @@ class InteretstWithAIViewModel extends BaseViewModel {
   ///
   List<HomeLocalEventsModel> listHomeLocaLEVents = [
     HomeLocalEventsModel(
-        MainImgUrl: AppAssets().localevents,
+        mainImgUrl: AppAssets().localevents,
         profileImgUrl: AppAssets().FacebookIcon,
         title: "Local Events",
         day: "Monday",
@@ -68,7 +68,7 @@ class InteretstWithAIViewModel extends BaseViewModel {
         className: "Cooking Class",
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
-        MainImgUrl: AppAssets().localevents,
+        mainImgUrl: AppAssets().localevents,
         profileImgUrl: AppAssets().GoogleIcon,
         title: "Local Events",
         day: "Monday",
@@ -76,7 +76,7 @@ class InteretstWithAIViewModel extends BaseViewModel {
         className: "Cooking Class",
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
-        MainImgUrl: AppAssets().localevents,
+        mainImgUrl: AppAssets().localevents,
         profileImgUrl: AppAssets().GoogleIcon,
         title: "Local Events",
         day: "Monday",
@@ -84,7 +84,7 @@ class InteretstWithAIViewModel extends BaseViewModel {
         className: "Cooking Class",
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
-        MainImgUrl: AppAssets().localevents,
+        mainImgUrl: AppAssets().localevents,
         profileImgUrl: AppAssets().AppleIcon,
         title: "Local Events",
         day: "Monday",
@@ -92,7 +92,7 @@ class InteretstWithAIViewModel extends BaseViewModel {
         className: "Cooking Class",
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
-        MainImgUrl: AppAssets().localevents,
+        mainImgUrl: AppAssets().localevents,
         profileImgUrl: AppAssets().GoogleIcon,
         title: "Local Events",
         day: "Monday",
@@ -100,7 +100,7 @@ class InteretstWithAIViewModel extends BaseViewModel {
         className: "Cooking Class",
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
-        MainImgUrl: AppAssets().localevents,
+        mainImgUrl: AppAssets().localevents,
         profileImgUrl: AppAssets().GoogleIcon,
         title: "Local Events",
         day: "Monday",
@@ -108,7 +108,7 @@ class InteretstWithAIViewModel extends BaseViewModel {
         className: "Cooking Class",
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
-        MainImgUrl: AppAssets().localevents,
+        mainImgUrl: AppAssets().localevents,
         profileImgUrl: AppAssets().FacebookIcon,
         title: "Local Events",
         day: "Monday",
@@ -116,7 +116,7 @@ class InteretstWithAIViewModel extends BaseViewModel {
         className: "Cooking Class",
         discription: "join us for fun and ....."),
     HomeLocalEventsModel(
-        MainImgUrl: AppAssets().localevents,
+        mainImgUrl: AppAssets().localevents,
         profileImgUrl: AppAssets().FacebookIcon,
         title: "Local Events",
         day: "Monday",

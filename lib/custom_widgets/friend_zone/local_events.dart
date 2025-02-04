@@ -21,7 +21,7 @@ class CustomLocalEventsWidget extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Image.asset("${Object_LocalEventModel.MainImgUrl}"),
+          Image.asset("${Object_LocalEventModel.mainImgUrl}"),
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisAlignment: MainAxisAlignment.start,

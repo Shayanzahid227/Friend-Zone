@@ -45,7 +45,7 @@ class CustomNearbyMatchesWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "${Object_nearbyMatches.GroupName}",
+                "${Object_nearbyMatches.groupName}",
                 style: GoogleFonts.nunito(
                     fontWeight: FontWeight.w800, fontSize: 17),
               ),

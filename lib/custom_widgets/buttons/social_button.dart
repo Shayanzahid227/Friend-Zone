@@ -23,8 +23,8 @@ class CustomSocialIconButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.all(5),
-      margin: EdgeInsets.symmetric(horizontal: 10),
+      margin: EdgeInsets.symmetric(horizontal: 16),
+      padding: EdgeInsets.all(2),
       decoration: BoxDecoration(
         color: color, // Background color of the container
         borderRadius: BorderRadius.circular(48),

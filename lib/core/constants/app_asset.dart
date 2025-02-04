@@ -42,7 +42,7 @@ class AppAssets {
   static String chat2 = "$iconsAssets/chat2.png";
   static String more = "$iconsAssets/more.png";
   static String saveIcon = "$iconsAssets/save.png";
-  static String notification = "$iconsAssets/Notification.png";
+  static String notification = "$iconsAssets/notification.png";
   static String langauge = "$iconsAssets/langauge.png";
   static String message = "$iconsAssets/message.png";
   static String gallery = "$iconsAssets/gallery.png";

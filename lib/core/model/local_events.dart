@@ -1,5 +1,5 @@
 class HomeLocalEventsModel {
-  String? MainImgUrl;
+  String? mainImgUrl;
   String? profileImgUrl;
   String? title;
   String? day;
@@ -8,7 +8,7 @@ class HomeLocalEventsModel {
   String? className;
   String? discription;
   HomeLocalEventsModel(
-      {this.MainImgUrl,
+      {this.mainImgUrl,
       this.profileImgUrl,
       this.title,
       this.day,
