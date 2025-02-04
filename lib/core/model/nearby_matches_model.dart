@@ -1,9 +1,9 @@
 class NearbyMatchesModel {
   String? imgUrl;
-  String? GroupName;
+  String? groupName;
   String? day;
   String? time;
   String? message;
   NearbyMatchesModel(
-      {this.imgUrl, this.GroupName, this.day, this.time, this.message});
+      {this.imgUrl, this.groupName, this.day, this.time, this.message});
 }

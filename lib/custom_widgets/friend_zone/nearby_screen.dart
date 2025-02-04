@@ -41,7 +41,7 @@ class CustomNearbyWidget extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
               Text(
-                "${Object_nearby.GroupName}",
+                "${Object_nearby.groupName}",
                 style: GoogleFonts.nunito(
                     fontWeight: FontWeight.w800, fontSize: 17),
               ),

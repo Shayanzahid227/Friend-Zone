@@ -32,31 +32,31 @@ class HomeScreenVeiwModel extends BaseViewModel {
   List<NearbyMatchesModel> listNearbyMatches = [
     NearbyMatchesModel(
         imgUrl: AppAssets().nearby1,
-        GroupName: "Hiking Group",
+        groupName: "Hiking Group",
         time: "10:am",
         day: "sunday",
         message: "join us for  a local hike"),
     NearbyMatchesModel(
         imgUrl: AppAssets().nearby1,
-        GroupName: "Hiking Group",
+        groupName: "Hiking Group",
         time: "10:am",
         day: "sunday",
         message: "join us for  a local hike"),
     NearbyMatchesModel(
         imgUrl: AppAssets().nearby1,
-        GroupName: "Hiking Group",
+        groupName: "Hiking Group",
         time: "10:am",
         day: "sunday",
         message: "join us for  a local hike"),
     NearbyMatchesModel(
         imgUrl: AppAssets().nearby1,
-        GroupName: "Hiking Group",
+        groupName: "Hiking Group",
         time: "10:am",
         day: "sunday",
         message: "join us for  a local hike"),
     NearbyMatchesModel(
         imgUrl: AppAssets().nearby1,
-        GroupName: "Hiking Group",
+        groupName: "Hiking Group",
         time: "10:am",
         day: "sunday",
         message: "join us for  a local hike"),

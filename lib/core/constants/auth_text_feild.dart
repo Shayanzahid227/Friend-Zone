@@ -4,10 +4,10 @@ import 'package:flutter/material.dart';
 
 final authFieldDecoration = InputDecoration(
   hintText: "Enter your email",
-  hintStyle: style16,
+  hintStyle: style16.copyWith(color: blackColor.withOpacity(0.50)),
   prefixIconColor: blackColor,
   suffixIconColor: blackColor,
-  fillColor: textFilledColor.withOpacity(0.09),
+  fillColor: blackColor.withOpacity(0.04),
   filled: true,
   border: InputBorder.none,
   enabledBorder: OutlineInputBorder(

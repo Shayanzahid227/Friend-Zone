@@ -1,9 +1,9 @@
 class NearbyScreenModel {
   String? imgUrl;
-  String? GroupName;
+  String? groupName;
   String? day;
   String? time;
   String? message;
   NearbyScreenModel(
-      {this.imgUrl, this.GroupName, this.day, this.time, this.message});
+      {this.imgUrl, this.groupName, this.day, this.time, this.message});
 }

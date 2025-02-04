@@ -6,25 +6,25 @@ class NearbyScreeViewModel extends BaseViewModel {
   List<NearbyScreenModel> listNearbyScreen = [
     NearbyScreenModel(
         imgUrl: AppAssets().nearby1,
-        GroupName: "Hikking",
+        groupName: "Hikking",
         day: "sunday",
         time: "12:00 PM ",
         message: "join us for local eventss"),
     NearbyScreenModel(
         imgUrl: AppAssets().nearby1,
-        GroupName: "Hikking",
+        groupName: "Hikking",
         day: "sunday",
         time: "12:00 PM ",
         message: "join us for local eventss"),
     NearbyScreenModel(
         imgUrl: AppAssets().nearby1,
-        GroupName: "Hikking",
+        groupName: "Hikking",
         day: "sunday",
         time: "12:00 PM ",
         message: "join us for local eventss"),
     NearbyScreenModel(
         imgUrl: AppAssets().nearby1,
-        GroupName: "Hikking",
+        groupName: "Hikking",
         day: "sunday",
         time: "12:00 PM ",
         message: "join us for local eventss"),
